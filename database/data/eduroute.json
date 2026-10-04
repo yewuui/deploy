@@ -1,0 +1,2512 @@
+{
+    "programs": [
+        {
+            "slug": "rpl",
+            "program_keahlian": "rekayasa-perangkat-lunak",
+            "name": "Rekayasa Perangkat Lunak",
+            "short_name": "RPL",
+            "description": null,
+            "logo": null,
+            "hero_title": "Rekayasa Perangkat Lunak (RPL)",
+            "hero_text": "Jurusan yang mempelajari pengembangan perangkat lunak — mulai dari merancang, membuat kode, menguji aplikasi, hingga mengelola basis data. Siswa belajar membangun website, aplikasi mobile, dan antarmuka yang mudah digunakan melalui praktik langsung di kelas.",
+            "highlights": [
+                {
+                    "title": "Pengembangan Web",
+                    "description": "Membangun website modern dari Frontend hingga Backend menggunakan framework industri terkini."
+                },
+                {
+                    "title": "Aplikasi Mobile",
+                    "description": "Merancang dan mengembangkan aplikasi Android/iOS yang interaktif dan ramah pengguna."
+                },
+                {
+                    "title": "Manajemen Basis Data",
+                    "description": "Merancang struktur penyimpanan data yang aman, efisien, dan cepat untuk skala besar."
+                },
+                {
+                    "title": "UI/UX Design",
+                    "description": "Mendesain antarmuka visual aplikasi yang estetis dan menciptakan pengalaman pengguna yang nyaman."
+                }
+            ],
+            "is_active": true
+        },
+        {
+            "slug": "akl",
+            "program_keahlian": "akutansi-dan-lembaga-keuangan",
+            "name": "Akuntansi",
+            "short_name": "AKL",
+            "description": "Program Keahlian Akuntansi SMKN 1 Bantul.",
+            "logo": null,
+            "hero_title": "Akuntansi (AKL)",
+            "hero_text": "Jurusan yang mempelajari cara mengatur dan mencatat keuangan dalam sebuah usaha atau perusahaan — mulai dari mencatat pemasukan dan pengeluaran, menghitung transaksi, membuat laporan keuangan, hingga memahami dasar-dasar perpajakan. Siswa belajar menggunakan aplikasi dan melakukan praktik pencatatan keuangan.",
+            "highlights": null,
+            "is_active": true
+        },
+        {
+            "slug": "bd",
+            "program_keahlian": "bisnis-digital",
+            "name": "Bisnis Digital",
+            "short_name": "BD",
+            "description": "Program Keahlian Bisnis Digital SMKN 1 Bantul.",
+            "logo": null,
+            "hero_title": "Bisnis Digital (BD)",
+            "hero_text": "Jurusan yang mempelajari cara menjalankan dan mengembangkan bisnis dengan memanfaatkan teknologi — mulai dari membuat promosi di media sosial, menjual produk secara online, membuat konten pemasaran, hingga menyusun strategi untuk mengembangkan sebuah usaha. Siswa juga belajar membuat dan mengembangkan ide bisnis",
+            "highlights": null,
+            "is_active": true
+        },
+        {
+            "slug": "br",
+            "program_keahlian": "bisnis-ritel",
+            "name": "Bisnis Retail",
+            "short_name": "BR",
+            "description": "Program Keahlian Bisnis Retail SMKN 1 Bantul.sadasdsadsad",
+            "logo": null,
+            "hero_title": "Bisnis Ritel (BR)",
+            "hero_text": "Jurusan yang mempelajari cara mengelola toko dan kegiatan jual beli — mulai dari menata barang, mengatur persediaan, melakukan transaksi, menghitung harga, hingga memberikan pelayanan yang baik kepada pelanggan. Siswa belajar memahami kegiatan toko melalui berbagai praktik secara langsung.",
+            "highlights": null,
+            "is_active": true
+        },
+        {
+            "slug": "dkv",
+            "program_keahlian": "desain-komunikasi-visual",
+            "name": "Desain Komunikasi Visual",
+            "short_name": "DKV",
+            "description": "Program Keahlian Desain Komunikasi Visual SMKN 1 Bantul.",
+            "logo": null,
+            "hero_title": "Desain Komunikasi Visual (DKV)",
+            "hero_text": "Jurusan yang mempelajari cara menyampaikan pesan melalui gambar dan desain yang menarik — mulai dari membuat logo, poster, ilustrasi, desain media sosial, hingga membuat berbagai karya visual. Siswa belajar menggunakan aplikasi desain dan mengembangkan kreativitas untuk menghasilkan karya yang menarik dan mudah dipahami.",
+            "highlights": null,
+            "is_active": true
+        },
+        {
+            "slug": "lps",
+            "program_keahlian": "layanan-perbankan-syariah",
+            "name": "Layanan Perbankan Syariah",
+            "short_name": "LPS",
+            "description": "Program Keahlian Layanan Perbankan Syariah SMKN 1 Bantul.",
+            "logo": null,
+            "hero_title": "Layanan Perbankan Syariah (LPS)",
+            "hero_text": "Jurusan yang mempelajari cara kerja pelayanan di bank yang menggunakan prinsip syariah — mulai dari melayani nasabah, mengelola dokumen, memahami transaksi, hingga mengenal berbagai produk dan layanan perbankan syariah. Siswa juga belajar cara berkomunikasi dan memberikan pelayanan yang baik kepada nasabah.",
+            "highlights": null,
+            "is_active": true
+        },
+        {
+            "slug": "mp",
+            "program_keahlian": "manajemen-perkantoran-dan-layanan-bisnis",
+            "name": "Manajemen Perkantoran",
+            "short_name": "MP",
+            "description": null,
+            "logo": null,
+            "hero_title": "Manajemen Perkantoran (MP)",
+            "hero_text": "Jurusan yang mempelajari cara mengatur berbagai pekerjaan di lingkungan kantor — mulai dari membuat dan mengelola dokumen, mengarsipkan data, membuat surat, mengatur jadwal, hingga memberikan pelayanan kepada orang lain. Siswa belajar menggunakan berbagai aplikasi perkantoran dan melakukan praktik administrasi secara langsung.",
+            "highlights": null,
+            "is_active": true
+        },
+        {
+            "slug": "tkj",
+            "program_keahlian": "teknik-komputer-dan-jaringan",
+            "name": "Teknik Komputer dan Jaringan",
+            "short_name": "TKJ",
+            "description": "Program Keahlian Teknik Komputer dan Jaringan SMKN 1 Bantul.",
+            "logo": null,
+            "hero_title": "Teknik Komputer dan Jaringan (TKJ)",
+            "hero_text": "Jurusan yang mempelajari cara kerja komputer dan jaringan internet — mulai dari merakit komputer, memasang sistem operasi, membuat dan mengatur jaringan, hingga melakukan perawatan dan memperbaiki masalah pada komputer atau jaringan. Siswa belajar melalui praktik langsung menggunakan perangkat komputer dan jaringan.",
+            "highlights": null,
+            "is_active": true
+        }
+    ],
+    "curriculums": [
+        {
+            "program": "rpl",
+            "grade": 12,
+            "type": "pkl",
+            "semester": 1,
+            "title": "dsad",
+            "description": "halo hsladowads dsadjsadksadsasasa\r\ndsakjdsad\r\nsdjsakdkskd\r\nadjakas",
+            "topics": [
+                "dsadsadsa",
+                "sadsadadsa",
+                "dsadsad",
+                "asdsadsadsada"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": "images/eduroute/curriculums/cEOh4zsscmGWmoWSnmp6FbyFG6D8E35GjO81y4gT.webp",
+            "order_number": 0
+        },
+        {
+            "program": "rpl",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "KONSEP ALUR BISNIS PPLG",
+            "description": "Pengertian: Pengenalan alur kerja di dunia pembuatan perangkat lunak dan gim, mulai dari ide dan kebutuhan pengguna sampai aplikasi jadi, serta profesi yang ada di dalamnya.",
+            "topics": [
+                "Konsep Alur Bisnis PPLG",
+                "Tahapan Pengembangan Perangkat Lunak",
+                "Profesi di Bidang PPLG"
+            ],
+            "week_start": 1,
+            "week_end": 2,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 1
+        },
+        {
+            "program": "rpl",
+            "grade": 11,
+            "type": null,
+            "semester": 1,
+            "title": "BASIS DATA",
+            "description": "Cara menyimpan, mengatur, dan mengelola data dalam tabel yang saling berhubungan agar mudah dicari dan tidak ganda. Jadi fondasi hampir semua aplikasi, baik web, desktop, maupun mobile.",
+            "topics": [
+                "Konsep Basis Data dan DBMS\r\nPerancangan Basis Data",
+                "ERD dan Normalisasi\r\nSQL",
+                "meliputi DDL",
+                "DML",
+                "SELECT",
+                "dan JOIN\r\nKeamanan dan Pemeliharaan Basis Data"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 1
+        },
+        {
+            "program": "rpl",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "PEMROGRAMAN TERSTRUKTUR",
+            "description": "Pengertian: Cara menulis program dengan alur yang teratur dan berurutan, memakai percabangan, perulangan, dan fungsi. Ini dasar utama sebelum belajar jenis pemrograman lain.",
+            "topics": [
+                "Variabel dan Tipe Data",
+                "Percabangan",
+                "Perulangan",
+                "Fungsi dan Prosedur"
+            ],
+            "week_start": 3,
+            "week_end": 4,
+            "color_theme": "teal",
+            "icon": null,
+            "image": null,
+            "order_number": 2
+        },
+        {
+            "program": "rpl",
+            "grade": 11,
+            "type": null,
+            "semester": 1,
+            "title": "PEMROGRAMAN GUI",
+            "description": "Membuat aplikasi desktop dengan tampilan visual seperti form, tombol, dan tabel yang bisa diklik pengguna. Aplikasinya terhubung ke basis data untuk",
+            "topics": [
+                "Dasar Algoritma dan Pemrograman\r\nPemrograman Berorientasi Objek\r\nPerancangan Antarmuka dan Event Handling\r\nKoneksi Database CRUD",
+                "Laporan",
+                "dan Pengemasan Aplikasi"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 2
+        },
+        {
+            "program": "rpl",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "SISTEM OPERASI & PERANGKAT KERAS",
+            "description": "Pengertian: Cara membuat program dengan memodelkan sesuatu sebagai objek yang punya data dan perilaku, seperti objek \"mobil\" yang punya warna dan bisa berjalan. Membuat program lebih rapi dan mudah dikembangkan.",
+            "topics": [
+                "Konsep Kelas dan Objek",
+                "Atribut dan Method",
+                "Enkapsulasi dan Pewarisan"
+            ],
+            "week_start": 5,
+            "week_end": 6,
+            "color_theme": "green",
+            "icon": null,
+            "image": null,
+            "order_number": 3
+        },
+        {
+            "program": "rpl",
+            "grade": 11,
+            "type": null,
+            "semester": 1,
+            "title": "PEMROGRAMAN WEB",
+            "description": "Membuat website dan aplikasi web, mulai dari tampilan di browser sampai pemrosesan data di server. Hasilnya bisa dipublikasikan dan diakses lewat internet.",
+            "topics": [
+                "Frontend",
+                "meliputi HTML",
+                "CSS",
+                "JavaScript",
+                "dan Bootstrap\r\nBackend",
+                "meliputi PHP atau Laravel",
+                "Session",
+                "dan Login\r\nIntegrasi Web dengan Basis Data\r\nKeamanan Web dan Deployment"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 3
+        },
+        {
+            "program": "rpl",
+            "grade": 10,
+            "type": "materi",
+            "semester": 1,
+            "title": "DASAR KOMPUTER & LOGIKA PEMROGRAMANn",
+            "description": "Pengertian: Mengenal cara kerja komputer dan melatih cara berpikir runtut untuk memecahkan masalah sebelum menulis kode.",
+            "topics": [
+                "Dasar Komputer",
+                "Algoritma dan Flowchart",
+                "Logika Pemrograman"
+            ],
+            "week_start": 7,
+            "week_end": 8,
+            "color_theme": "yellow",
+            "icon": null,
+            "image": null,
+            "order_number": 4
+        },
+        {
+            "program": "rpl",
+            "grade": 11,
+            "type": null,
+            "semester": 1,
+            "title": "PEMROGRAMAN MOBILE",
+            "description": "Membuat aplikasi yang berjalan di HP Android atau iOS, termasuk memakai fitur perangkat seperti kamera dan GPS. Aplikasi akhirnya dirilis ke toko aplikasi.",
+            "topics": [
+                "Platform dan Lingkungan Pengembangan Mobile\r\nDesain UI UX Mobile\r\nLogika Aplikasi dan Penyimpanan Lokal\r\nIntegrasi API",
+                "Pengujian",
+                "dan Publikasi"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 4
+        },
+        {
+            "program": "rpl",
+            "grade": 10,
+            "type": "materi",
+            "semester": 1,
+            "title": "ALGORITMA & PEMROGRAMAN LANJUTAN",
+            "description": "Pengertian: Membuat halaman web sederhana. HTML mengatur isi halaman, sedangkan CSS mengatur tampilannya.",
+            "topics": [
+                "Variabel & Tipe Data",
+                "Kontrol Alur (If/For)",
+                "Fungsi C++"
+            ],
+            "week_start": 9,
+            "week_end": 10,
+            "color_theme": "orange",
+            "icon": null,
+            "image": null,
+            "order_number": 5
+        },
+        {
+            "program": "rpl",
+            "grade": 10,
+            "type": "materi",
+            "semester": 1,
+            "title": "BASIS DATA DASAR & PROYEK AKHIR K10",
+            "description": "Pengertian: Cara menyimpan dan mengelola data secara teratur di komputer, misalnya data siswa atau data barang.",
+            "topics": [
+                "Pengenalan SQL",
+                "Desain Database",
+                "Membuat Website"
+            ],
+            "week_start": 11,
+            "week_end": 12,
+            "color_theme": "purple",
+            "icon": null,
+            "image": null,
+            "order_number": 6
+        },
+        {
+            "program": "rpl",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "BASIS DATA DASAR",
+            "description": "Pengertian: Cara menyimpan dan mengelola data secara teratur di komputer, misalnya data siswa atau data barang.",
+            "topics": [
+                "Konsep Basis Data",
+                "Tabel dan Relasi Dasar",
+                "Perintah SQL Dasar"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 6
+        },
+        {
+            "program": "akl",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "AKUNTANSI DASAR",
+            "description": "Pengertian: Pengenalan cara mencatat, mengelompokkan, dan melaporkan keuangan suatu usaha.",
+            "topics": [
+                "Pengertian Akuntansi",
+                "Persamaan Dasar Akuntansi",
+                "Transaksi dan Bukti Transaksi"
+            ],
+            "week_start": 1,
+            "week_end": 2,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 1
+        },
+        {
+            "program": "akl",
+            "grade": 11,
+            "type": null,
+            "semester": 1,
+            "title": "KEUANGAN",
+            "description": "Dasar mencatat dan melaporkan keuangan perusahaan, dari transaksi harian sampai menjadi laporan keuangan.",
+            "topics": [
+                "Dasar Akuntansi",
+                "meliputi Jurnal",
+                "Buku Besar",
+                "dan Neraca Saldo\r\nSiklus Akuntansi Perusahaan Jasa",
+                "Dagang",
+                "dan Manufaktur\r\nLaporan Keuangan\r\nAkuntansi Aset",
+                "Utang",
+                "dan Modal"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 1
+        },
+        {
+            "program": "akl",
+            "grade": 10,
+            "type": null,
+            "semester": 2,
+            "title": "SPREADSHEET & ETIKA PROFESI",
+            "description": "Pengertian: Memakai spreadsheet untuk mengolah data keuangan, serta memahami sikap kerja yang jujur dan bertanggung jawab.",
+            "topics": [
+                "Dasar Spreadsheet",
+                "Rumus dan Fungsi Dasar",
+                "Etika Profesi"
+            ],
+            "week_start": 1,
+            "week_end": 2,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 2
+        },
+        {
+            "program": "akl",
+            "grade": 11,
+            "type": null,
+            "semester": 1,
+            "title": "PERPAJAKAN",
+            "description": "Memahami aturan pajak, cara menghitung, membayar, dan melaporkannya sesuai ketentuan yang berlaku.",
+            "topics": [
+                "Ketentuan Umum Perpajakan dan NPWP\r\nPPh Pasal 21",
+                "22",
+                "23",
+                "dan 4 ayat 2\r\nPPN\r\ne-Billing",
+                "e-Filing",
+                "dan SPT"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 2
+        },
+        {
+            "program": "akl",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "PROSES BISNIS & K3LH AKL",
+            "description": "Pengertian: Alur kerja di bidang akuntansi dan keuangan, serta cara bekerja yang aman dan sehat.",
+            "topics": [
+                "Proses Bisnis Bidang AKL",
+                "Profesi di Bidang Akuntansi",
+                "K3LH"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 3
+        },
+        {
+            "program": "akl",
+            "grade": 11,
+            "type": null,
+            "semester": 1,
+            "title": "KOMPUTER AKUNTANSI",
+            "description": "Mengerjakan akuntansi dengan aplikasi komputer sehingga pencatatan lebih cepat dan laporan tersusun otomatis.",
+            "topics": [
+                "Aplikasi Akuntansi",
+                "meliputi Accurate",
+                "Zahir",
+                "dan MYOB\r\nDatabase Perusahaan dan Saldo Awal\r\nPencatatan Transaksi dan Laporan Otomatis\r\nPengolahan Data dengan Excel"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 3
+        },
+        {
+            "program": "akl",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "MATEMATIKA KEUANGAN DASAR",
+            "description": "Pengertian: Perhitungan yang sering dipakai dalam urusan uang, seperti persentase, bunga, dan diskon.",
+            "topics": [
+                "Persentase dan Perbandingan",
+                "Bunga Sederhana",
+                "Diskon dan Laba Rugi"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 4
+        },
+        {
+            "program": "akl",
+            "grade": 11,
+            "type": null,
+            "semester": 1,
+            "title": "EKONOMI ISLAM DAN LAYANAN LEMBAGA KEUANGAN",
+            "description": "Memahami prinsip dasar ekonomi Islam dan operasional lembaga keuangan syariah, serta menerapkan standar pelayanan prima untuk memasarkan produk perbankan syariah kepada nasabah.",
+            "topics": [
+                "Prinsip Ekonomi Islam",
+                "meliputi Larangan Riba",
+                "Gharar",
+                "Maysir",
+                "dan Akad-Akad Syariah\r\nLembaga Keuangan Syariah",
+                "meliputi Bank Syariah",
+                "BPRS",
+                "BMT",
+                "Asuransi Syariah (Takaful)",
+                "dan Pegadaian Syariah\r\nPengelolaan Zakat",
+                "Infak",
+                "Sedekah",
+                "dan Wakaf (ZISWAF)\r\nPelayanan Prima (Service Excellence)",
+                "Penanganan Keluhan Nasabah",
+                "dan Pemasaran Produk Syariah"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 4
+        },
+        {
+            "program": "akl",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "ADMINISTRASI & DOKUMEN TRANSAKSI",
+            "description": "Pengertian: Mengenal dokumen yang dipakai dalam transaksi usaha dan cara mengarsipkannya dengan rapi.",
+            "topics": [
+                "Jenis Dokumen Transaksi",
+                "Pengisian Dokumen",
+                "Pengarsipan"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 5
+        },
+        {
+            "program": "akl",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "DASAR PERPAJAKAN",
+            "description": "Pengertian: Mengenal pajak, yaitu iuran wajib kepada negara, serta fungsi dan jenisnya dalam kegiatan usaha.",
+            "topics": [
+                "Pengertian dan Fungsi Pajak",
+                "Jenis-Jenis Pajak",
+                "NPWP dan Kewajiban Pajak",
+                "LPS"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 6
+        },
+        {
+            "program": "bd",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "EKONOMI & KEGIATAN USAHA",
+            "description": "Pengertian: Pengenalan dasar ekonomi dan kegiatan usaha, sebagai bekal sebelum berbisnis secara digital.",
+            "topics": [
+                "Konsep Dasar Ekonomi",
+                "Kegiatan Usaha",
+                "Bentuk-Bentuk Usaha"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 1
+        },
+        {
+            "program": "bd",
+            "grade": 11,
+            "type": null,
+            "semester": 1,
+            "title": "EKONOMI BISNIS DAN MARKETING",
+            "description": "Dasar dunia usaha dan pemasaran, sebagai bekal sebelum masuk ke strategi yang lebih spesifik.",
+            "topics": [
+                "Dasar Ekonomi Bisnis\r\nKonsep Pemasaran dan Bauran Pemasaran\r\nAnalisis Kebutuhan Konsumen\r\nPerencanaan Bisnis Sederhana"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 1
+        },
+        {
+            "program": "bd",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "ADMINISTRASI UMUM & FUNGSI-FUNGSI MANAJEMEN",
+            "description": "Pengertian: Mengelola administrasi dan memahami fungsi manajemen dalam menjalankan usaha.",
+            "topics": [
+                "Administrasi Umum",
+                "Fungsi-Fungsi Manajemen",
+                "Penerapan di Usaha"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 2
+        },
+        {
+            "program": "bd",
+            "grade": 11,
+            "type": null,
+            "semester": 1,
+            "title": "MARKETING",
+            "description": "Strategi memasarkan produk secara lebih mendalam, dari membangun merek sampai mengukur hasilnya.",
+            "topics": [
+                "Segmentasi Pasar dan Branding\r\nStrategi Harga dan Promosi\r\nKomunikasi Pemasaran dan Personal Selling\r\nRiset Pasar dan Evaluasi Kinerja"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 2
+        },
+        {
+            "program": "bd",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "PENGANTAR BISNIS DIGITAL",
+            "description": "Pengertian: Mengenal usaha yang dijalankan lewat internet, seperti toko online dan marketplace.",
+            "topics": [
+                "Konsep Bisnis Digital",
+                "Marketplace dan Toko Online",
+                "Peluang Karier Bisnis Digital"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 3
+        },
+        {
+            "program": "bd",
+            "grade": 11,
+            "type": null,
+            "semester": 1,
+            "title": "DIGITAL MARKETING",
+            "description": "Memasarkan produk lewat internet, seperti media sosial, mesin pencari, iklan online, dan marketplace.",
+            "topics": [
+                "Media Sosial",
+                "SEO SEM",
+                "dan Iklan Digital\r\nMarketplace dan E-Commerce\r\nContent Marketing\r\nAnalitik Digital dan Email Marketing"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 3
+        },
+        {
+            "program": "bd",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "PEMASARAN DIGITAL DASAR",
+            "description": "Pengertian: Mempromosikan produk lewat media sosial dan platform online supaya dikenal lebih banyak orang.",
+            "topics": [
+                "Media Sosial untuk Bisnis",
+                "Pembuatan Konten Promosi",
+                "Dasar Iklan Digital"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 4
+        },
+        {
+            "program": "bd",
+            "grade": 11,
+            "type": null,
+            "semester": 1,
+            "title": "DIGITAL ONBOARDING",
+            "description": "Proses menerima pelanggan atau mitra baru ke layanan digital, mulai dari pendaftaran, verifikasi identitas, sampai akun aktif dan siap dipakai.",
+            "topics": [
+                "Pendaftaran dan Aktivasi Digital\r\nVerifikasi Identitas e-KYC\r\nKeamanan dan Perlindungan Data Pribadi\r\nDukungan Pelanggan dan Pengelolaan Platform"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 4
+        },
+        {
+            "program": "bd",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "LITERASI DIGITAL & KEAMANAN DATA",
+            "description": "Pengertian: Memakai teknologi digital dengan bijak serta menjaga keamanan data pribadi dan data usaha.",
+            "topics": [
+                "Etika Bermedia Digital",
+                "Keamanan Akun dan Data",
+                "Menghindari Penipuan Online"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 5
+        },
+        {
+            "program": "bd",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "PENGELOLAAN TOKO ONLINE",
+            "description": "Pengertian: Membuka dan menjalankan toko di marketplace atau media sosial, dari menampilkan produk sampai melayani pesanan.",
+            "topics": [
+                "Membuat Akun Toko",
+                "Mengunggah Produk",
+                "Mengelola Pesanan"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 6
+        },
+        {
+            "program": "br",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "EKONOMI & KEGIATAN USAHA",
+            "description": "Pengertian: Pengenalan dasar ekonomi dan cara kerja kegiatan usaha, dari produksi, distribusi, sampai konsumsi.",
+            "topics": [
+                "Konsep Dasar Ekonomi",
+                "Kegiatan Usaha",
+                "Bentuk-Bentuk Usaha"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 1
+        },
+        {
+            "program": "br",
+            "grade": 11,
+            "type": null,
+            "semester": 1,
+            "title": "VISUAL MERCHANDISING",
+            "description": "Seni menata produk dan tampilan toko agar menarik perhatian pelanggan dan mendorong pembelian.",
+            "topics": [
+                "Layout Toko dan Planogram\r\nEtalase",
+                "Warna",
+                "dan Pencahayaan\r\nPromo Point of Sale\r\nPenataan Musiman dan Tematik"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 1
+        },
+        {
+            "program": "br",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "ADMINISTRASI UMUM & FUNGSI-FUNGSI MANAJEMEN",
+            "description": "Pengertian: Mengelola administrasi dan memahami fungsi manajemen: perencanaan, pengorganisasian, pelaksanaan, dan pengawasan.",
+            "topics": [
+                "Administrasi Umum",
+                "Fungsi-Fungsi Manajemen",
+                "Penerapan di Usaha"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 2
+        },
+        {
+            "program": "br",
+            "grade": 11,
+            "type": null,
+            "semester": 1,
+            "title": "MARKETING",
+            "description": "Cara memperkenalkan dan menjual produk ke pasar yang tepat, secara langsung di toko maupun online.",
+            "topics": [
+                "Segmentasi",
+                "Targeting",
+                "dan Positioning\r\nBauran Pemasaran 4P\r\nPromosi dan Teknik Penjualan\r\nPemasaran Offline dan Online"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 2
+        },
+        {
+            "program": "br",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "PENGANTAR BISNIS RITEL",
+            "description": "Pengertian: Mengenal usaha penjualan barang langsung ke konsumen, seperti minimarket, toko, dan supermarket.",
+            "topics": [
+                "Pengertian dan Peran Ritel",
+                "Jenis-Jenis Toko Ritel",
+                "Profesi di Bidang Ritel"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 3
+        },
+        {
+            "program": "br",
+            "grade": 11,
+            "type": null,
+            "semester": 1,
+            "title": "ADMINISTRASI TRANSAKSI DAN PENGELOLAAN BISNIS",
+            "description": "Mengurus transaksi dan operasional toko sehari-hari, dari kasir dan stok barang sampai laporan usaha.",
+            "topics": [
+                "Transaksi Ritel dan Sistem POS\r\nManajemen Persediaan dan Stock Opname\r\nPencatatan Penjualan dan Pembelian\r\nKeuangan Usaha dan Laporan"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 3
+        },
+        {
+            "program": "br",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "PELAYANAN PELANGGAN",
+            "description": "Pengertian: Melayani pembeli dengan ramah dan profesional supaya mereka puas dan mau kembali.",
+            "topics": [
+                "Etika Pelayanan",
+                "Komunikasi dengan Pelanggan",
+                "Penanganan Keluhan"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 4
+        },
+        {
+            "program": "br",
+            "grade": 11,
+            "type": null,
+            "semester": 1,
+            "title": "CUSTOMER SERVICE DAN PENGEMASAN PRODUK",
+            "description": "Melayani pelanggan dengan baik dan mengemas produk agar aman, rapi, dan menarik.",
+            "topics": [
+                "Pelayanan Prima\r\nPenanganan Keluhan\r\nJenis dan Bahan Kemasan\r\nTeknik Packing dan Pelabelan"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 4
+        },
+        {
+            "program": "br",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "PENGELOLAAN BARANG & DISPLAY",
+            "description": "Pengertian: Mengatur stok barang dan menata produk agar menarik dan mudah ditemukan pembeli.",
+            "topics": [
+                "Penerimaan dan Penyimpanan Barang",
+                "Penataan Produk",
+                "Pencatatan Stok"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 5
+        },
+        {
+            "program": "br",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "KASIR & TRANSAKSI PENJUALAN",
+            "description": "Pengertian: Melayani pembayaran pembeli dengan benar, dari menghitung belanjaan sampai membuat laporan penjualan.",
+            "topics": [
+                "Pengoperasian Mesin Kasir",
+                "Perhitungan Transaksi",
+                "Laporan Penjualan Harian"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 6
+        },
+        {
+            "program": "dkv",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "GRAPHIC DESIGN TECHNOLOGY",
+            "description": "Pengertian: Pengenalan dasar desain grafis, yaitu cara menyampaikan pesan lewat gambar, warna, huruf, dan tata letak dengan bantuan perangkat lunak desain. Jadi fondasi sebelum membuat poster, logo, dan desain lainnya.",
+            "topics": [
+                "Dasar Desain Grafis",
+                "Elemen dan Prinsip Desain",
+                "Warna dan Tipografi",
+                "Perangkat Lunak Desain"
+            ],
+            "week_start": 1,
+            "week_end": 2,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 1
+        },
+        {
+            "program": "dkv",
+            "grade": 11,
+            "type": null,
+            "semester": 1,
+            "title": "KARYAUI/UX",
+            "description": "Merancang tampilan dan pengalaman pengguna pada aplikasi dan website agar mudah dipakai dan menarik.",
+            "topics": [
+                "Prinsip Desain Visual dan Riset Pengguna\r\nWireframe dan Mockup\r\nPrototype dengan Figma atau Adobe XD\r\nUsability Testing dan Design System"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 1
+        },
+        {
+            "program": "dkv",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "ANIMASI 3D",
+            "description": "Pengertian: Teknik membuat objek atau karakter tiga dimensi di komputer lalu menggerakkannya agar terlihat hidup. Dipakai di film animasi, game, dan iklan.",
+            "topics": [
+                "Dasar Animasi",
+                "Prinsip Animasi",
+                "Pemodelan 3D",
+                "Perangkat Lunak 3D"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 2
+        },
+        {
+            "program": "dkv",
+            "grade": 11,
+            "type": null,
+            "semester": 1,
+            "title": "DESAIN GRAFIS PERCETAKAN DAN GRAFIKA",
+            "description": "Membuat desain untuk media cetak seperti logo, poster, brosur, dan kemasan, sekaligus memahami cara produksinya di percetakan.",
+            "topics": [
+                "Elemen",
+                "Prinsip Desain",
+                "Warna",
+                "dan Tipografi\r\nPerangkat Lunak Desain",
+                "meliputi Illustrator",
+                "Photoshop",
+                "CorelDRAW",
+                "dan InDesign\r\nProduk Cetak\r\nProses Produksi Cetak",
+                "meliputi CMYK",
+                "Kertas",
+                "dan Finishing"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 2
+        },
+        {
+            "program": "dkv",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "FOTOGRAFI",
+            "description": "Pengertian: Seni dan teknik menghasilkan gambar dengan merekam cahaya memakai kamera. Di DKV, hasilnya dipakai sebagai bahan desain seperti foto produk, poster, dan konten media sosial.",
+            "topics": [
+                "Dasar Fotografi",
+                "Pengenalan Kamera",
+                "Komposisi",
+                "Pencahayaan"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 3
+        },
+        {
+            "program": "dkv",
+            "grade": 11,
+            "type": null,
+            "semester": 1,
+            "title": "FOTOGRAFI",
+            "description": "Seni dan teknik menghasilkan gambar dengan merekam cahaya memakai kamera. Di DKV, hasilnya dipakai sebagai bahan desain seperti foto produk, poster, dan konten media sosial.",
+            "topics": [
+                "Teknik Kamera",
+                "meliputi ISO",
+                "Aperture",
+                "dan Shutter Speed\r\nKomposisi\r\nPencahayaan dan Genre Foto\r\nPascaproduksi dan Portofolio"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 3
+        },
+        {
+            "program": "dkv",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "DASAR MENGGAMBAR",
+            "description": "Pengertian: Kemampuan membuat gambar dengan tangan, mulai dari sketsa sampai ilustrasi sederhana. Ini dasar untuk merancang ide sebelum dikerjakan di komputer.",
+            "topics": [
+                "Sketsa dan Bentuk Dasar",
+                "Proporsi dan Perspektif",
+                "Ilustrasi Sederhana"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 4
+        },
+        {
+            "program": "dkv",
+            "grade": 11,
+            "type": null,
+            "semester": 1,
+            "title": "TEKNIK AUDIO, VIDEO, DAN EDITING",
+            "description": "Proses membuat karya video lengkap, dari merencanakan ide, merekam gambar dan suara, sampai menyunting hasil akhirnya.",
+            "topics": [
+                "Pra-produksi",
+                "meliputi Ide",
+                "Skenario",
+                "dan Storyboard\r\nProduksi Gambar dan Audio\r\nEditing Video",
+                "Color Grading",
+                "dan Mixing Audio\r\nRendering dan Distribusi"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 4
+        },
+        {
+            "program": "dkv",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "VIDEOGRAFI DASAR",
+            "description": "Pengertian: Teknik merekam dan menyusun video sederhana, mulai dari pengambilan gambar sampai penyuntingan. Dipakai untuk konten promosi dan media sosial.",
+            "topics": [
+                "Dasar Pengambilan Video",
+                "Sudut dan Gerakan Kamera",
+                "Editing Video Dasar"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 5
+        },
+        {
+            "program": "dkv",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "PROSES BISNIS & K3LH DKV",
+            "description": "Pengertian: Pengenalan alur kerja di dunia desain, mulai dari klien meminta pekerjaan sampai hasil diserahkan. Termasuk cara bekerja yang aman dan sehat di depan komputer.",
+            "topics": [
+                "Alur Kerja Industri Kreatif",
+                "Profesi di Bidang DKV",
+                "K3LH"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 6
+        },
+        {
+            "program": "lps",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "AKUNTANSI DASAR",
+            "description": "Pengertian: Pengenalan cara mencatat dan melaporkan keuangan, sebagai bekal bekerja di lembaga keuangan.",
+            "topics": [
+                "Pengertian Akuntansi",
+                "Persamaan Dasar Akuntansi",
+                "Transaksi dan Bukti Transaksi"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 1
+        },
+        {
+            "program": "lps",
+            "grade": 11,
+            "type": null,
+            "semester": 1,
+            "title": "AKUNTANSI PERBANKAN SYARIAH",
+            "description": "Pencatatan keuangan bank yang mengikuti prinsip syariah, termasuk akad-akad produk bank syariah.",
+            "topics": [
+                "Dasar Akuntansi dan Prinsip Syariah\r\nAkuntansi Murabahah",
+                "Mudharabah",
+                "dan Musyarakah\r\nAkuntansi Ijarah dan Wadiah\r\nLaporan Keuangan Bank Syariah"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 1
+        },
+        {
+            "program": "lps",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "SPREADSHEET & ETIKA PROFESI",
+            "description": "Pengertian: Mengolah data dan angka memakai spreadsheet, serta memahami etika bekerja di bidang perbankan.",
+            "topics": [
+                "Dasar Spreadsheet",
+                "Rumus dan Fungsi Dasar",
+                "Etika Profesi"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 2
+        },
+        {
+            "program": "lps",
+            "grade": 11,
+            "type": null,
+            "semester": 1,
+            "title": "PENGELOLAAN KAS",
+            "description": "Mengelola uang tunai dan rekening dengan tertib, mulai dari pencatatan, layanan teller, sampai mencocokkan catatan kas dengan bank.",
+            "topics": [
+                "Administrasi Kas dan Bank\r\nPengelolaan Uang Tunai dan Teller\r\nKeaslian Uang Rupiah\r\nRekonsiliasi"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 2
+        },
+        {
+            "program": "lps",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "PENGANTAR PERBANKAN SYARIAH",
+            "description": "Pengertian: Mengenal bank yang menjalankan usahanya berdasarkan prinsip syariah Islam dan bedanya dengan bank konvensional.",
+            "topics": [
+                "Konsep Perbankan Syariah",
+                "Prinsip-Prinsip Syariah",
+                "Perbedaan dengan Bank Konvensional"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 3
+        },
+        {
+            "program": "lps",
+            "grade": 11,
+            "type": null,
+            "semester": 1,
+            "title": "KOMPUTER AKUNTANSI DASAR PERBANKAN DAN",
+            "description": "Praktik memakai aplikasi akuntansi dan simulasi sistem inti bank (core banking) untuk memproses transaksi perbankan.",
+            "topics": [
+                "Aplikasi Akuntansi Dasar Perbankan\r\nSimulasi Core Banking Armadillo\r\nTransaksi Rekening dan Pembiayaan\r\nLaporan Perbankan dari Sistem"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 3
+        },
+        {
+            "program": "lps",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "PRODUK PERBANKAN SYARIAH",
+            "description": "Pengertian: Layanan yang ditawarkan bank syariah kepada nasabah, mulai dari menabung sampai pembiayaan.",
+            "topics": [
+                "Produk Simpanan",
+                "Produk Pembiayaan",
+                "Akad Dasar"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 4
+        },
+        {
+            "program": "lps",
+            "grade": 11,
+            "type": null,
+            "semester": 1,
+            "title": "EKONOMI ISLAM DAN LAYANAN LEMBAGA KEUANGAN",
+            "description": "Memahami prinsip ekonomi Islam dan lembaga keuangan syariah, serta cara melayani nasabah dengan baik.",
+            "topics": [
+                "Prinsip Ekonomi Islam",
+                "meliputi Larangan Riba",
+                "Gharar",
+                "dan Maysir\r\nLembaga Keuangan Syariah\r\nZakat dan Wakaf\r\nPelayanan Prima dan Produk Syariah"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 4
+        },
+        {
+            "program": "lps",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "PELAYANAN NASABAH",
+            "description": "Pengertian: Cara melayani nasabah dengan ramah, sopan, dan profesional.",
+            "topics": [
+                "Etika Pelayanan",
+                "Komunikasi dengan Nasabah",
+                "Penanganan Keluhan"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 5
+        },
+        {
+            "program": "lps",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "LITERASI KEUANGAN SYARIAH",
+            "description": "Pengertian: Kemampuan mengelola uang sesuai prinsip syariah, mulai dari menabung sampai menghindari praktik yang dilarang.",
+            "topics": [
+                "Menabung dan Mengelola Uang",
+                "Zakat",
+                "Infak",
+                "dan Sedekah",
+                "Riba dan Cara Menghindarinya"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 6
+        },
+        {
+            "program": "mp",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "TEKNOLOGI PERKANTORAN",
+            "description": "Pengertian: Pengenalan peralatan dan perangkat lunak untuk pekerjaan kantor, seperti komputer, pengolah kata, dan alat komunikasi.",
+            "topics": [
+                "Peralatan Kantor",
+                "Perangkat Lunak Perkantoran",
+                "Komunikasi di Kantor"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 1
+        },
+        {
+            "program": "mp",
+            "grade": 11,
+            "type": null,
+            "semester": 1,
+            "title": "DMINISTRASI UMUM DAN RAPAT",
+            "description": "Kegiatan dasar administrasi kantor, dari mengelola surat dan jadwal sampai menyelenggarakan rapat.",
+            "topics": [
+                "Fungsi Administrasi dan Struktur Organisasi\r\nSurat-Menyurat dan Agenda\r\nPenyelenggaraan Rapat dan Notulen\r\nPerjalanan Dinas"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 1
+        },
+        {
+            "program": "mp",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "SISTEM INFORMASI MANAJEMEN",
+            "description": "Pengertian: Sistem yang mengumpulkan dan mengolah data supaya bisa dipakai pimpinan untuk mengambil keputusan.",
+            "topics": [
+                "Konsep Sistem Informasi",
+                "Pengelolaan Data",
+                "Penerapan di Perkantoran"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 2
+        },
+        {
+            "program": "mp",
+            "grade": 11,
+            "type": null,
+            "semester": 1,
+            "title": "KEARSIPAN DAN EKONOMI BISNIS",
+            "description": "Mengelola arsip agar mudah ditemukan kembali, serta memahami dasar kegiatan ekonomi dan dunia usaha.",
+            "topics": [
+                "Sistem Kearsipan Manual dan Digital\r\nPenyusutan Arsip\r\nKegiatan Ekonomi dan Pasar\r\nBadan Usaha dan Ketenagakerjaan"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 2
+        },
+        {
+            "program": "mp",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "LOGISTIK",
+            "description": "Pengertian: Pengelolaan barang mulai dari pengadaan, penyimpanan, sampai pengiriman agar tersedia tepat waktu dan tepat jumlah.",
+            "topics": [
+                "Pengertian Logistik",
+                "Pengadaan dan Penyimpanan Barang",
+                "Distribusi Barang"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 3
+        },
+        {
+            "program": "mp",
+            "grade": 11,
+            "type": null,
+            "semester": 1,
+            "title": "KOMUNIKASI",
+            "description": "Kemampuan menyampaikan pesan secara jelas dan sopan di lingkungan kerja, lewat lisan, tulisan, telepon, maupun email.",
+            "topics": [
+                "Komunikasi Efektif dan Etika\r\nTelepon",
+                "Email",
+                "dan Korespondensi Bisnis\r\nPublic Relations Dasar\r\nPenanganan Tamu"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 3
+        },
+        {
+            "program": "mp",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "KEARSIPAN",
+            "description": "Pengertian: Cara menyimpan, mengatur, dan menemukan kembali dokumen kantor dengan cepat dan aman.",
+            "topics": [
+                "Pengertian dan Fungsi Arsip",
+                "Sistem Penyimpanan Arsip",
+                "Penemuan Kembali Arsip"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 4
+        },
+        {
+            "program": "mp",
+            "grade": 11,
+            "type": null,
+            "semester": 1,
+            "title": "TEKNOLOGI PERKANTORAN",
+            "description": "Memakai aplikasi dan peralatan kantor modern untuk mendukung pekerjaan administrasi sehari-hari.",
+            "topics": [
+                "Aplikasi Perkantoran",
+                "meliputi Word",
+                "Excel",
+                "dan PowerPoint\r\nAplikasi Kolaborasi Google Workspace\r\nPeralatan Kantor\r\nPengelolaan Data dan Keamanan Informasi"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 4
+        },
+        {
+            "program": "mp",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "KORESPONDENSI & ADMINISTRASI SURAT",
+            "description": "Pengertian: Menulis dan mengelola surat menyurat kantor dengan format dan bahasa yang benar.",
+            "topics": [
+                "Jenis dan Bentuk Surat",
+                "Bahasa Surat Resmi",
+                "Pengelolaan Surat Masuk dan Keluar"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 5
+        },
+        {
+            "program": "mp",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "PENGELOLAAN RAPAT & AGENDA",
+            "description": "Pengertian: Menyiapkan dan mencatat kegiatan rapat serta mengatur jadwal pimpinan agar pekerjaan kantor lancar.",
+            "topics": [
+                "Persiapan Rapat",
+                "Penjadwalan Kegiatan",
+                "Pembuatan Notulen"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 6
+        },
+        {
+            "program": "tkj",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "PROSES BISNIS, PROFESI & KEWIRAUSAHAAN",
+            "description": "Pengertian: Pengenalan dunia kerja di bidang TKJ, mulai dari alur pekerjaan di perusahaan, profesi yang bisa dijalani, sampai cara bekerja yang aman dan berbudaya kerja baik.",
+            "topics": [
+                "Proses Bisnis Bidang TKJ",
+                "dan Kewirausahaan",
+                "K3LH",
+                "Budaya Kerja"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 1
+        },
+        {
+            "program": "tkj",
+            "grade": 11,
+            "type": null,
+            "semester": 1,
+            "title": "PERENCANAAN DAN PENGALAMATAN JARINGAN",
+            "description": "Merancang jaringan komputer dan memberi alamat unik pada setiap perangkat agar data sampai ke tujuan dengan benar. Ini tahap perencanaan sebelum jaringan dibangun.",
+            "topics": [
+                "Model OSI",
+                "TCP IP",
+                "dan Topologi\r\nPengalamatan IPv4 dan IPv6\r\nSubnetting",
+                "VLSM",
+                "dan CIDR\r\nPerencanaan dan Simulasi Jaringan"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 1
+        },
+        {
+            "program": "tkj",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "TEKNOLOGI, MEDIA & JARINGAN TELEKOMUNIKASI",
+            "description": "Pengenalan perkembangan teknologi komunikasi dan media yang dipakai untuk menghubungkan perangkat, seperti kabel, fiber optik, dan sinyal nirkabel.",
+            "topics": [
+                "Perkembangan Teknologi",
+                "Media Transmisi",
+                "Jaringan Telekomunikasi"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 2
+        },
+        {
+            "program": "tkj",
+            "grade": 11,
+            "type": null,
+            "semester": 1,
+            "title": "TEKNOLOGI JARINGAN KABEL DAN NIRKABEL",
+            "description": "Membangun dan mengatur jaringan fisik lewat kabel maupun Wi-Fi, lalu memperbaikinya jika terjadi gangguan.",
+            "topics": [
+                "Media Transmisi",
+                "meliputi UTP dan Fiber Optik\r\nKonfigurasi Switch",
+                "Router",
+                "dan VLAN\r\nJaringan Nirkabel",
+                "meliputi Wi-Fi dan Access Point\r\nTroubleshooting Jaringan"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 2
+        },
+        {
+            "program": "tkj",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "ALAT UKUR & DASAR-DASAR TKJ",
+            "description": "Pengertian: Belajar memakai alat ukur yang biasa dipakai teknisi, seperti multimeter dan LAN tester, serta memahami dasar-dasar pekerjaan komputer dan jaringan.",
+            "topics": [
+                "Penggunaan Alat Ukur",
+                "Dasar-Dasar TKJ"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 3
+        },
+        {
+            "program": "tkj",
+            "grade": 11,
+            "type": null,
+            "semester": 1,
+            "title": "KEAMANAN JARINGAN",
+            "description": "Melindungi jaringan dan data dari serangan dan akses tidak sah. Mencakup mengenali ancaman, membuat pertahanan, dan menangani insiden.",
+            "topics": [
+                "Ancaman dan Serangan Jaringan\r\nFirewall",
+                "ACL",
+                "dan IDS IPS\r\nVPN",
+                "Enkripsi",
+                "dan Autentikasi\r\nMonitoring dan Audit Keamanan"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 3
+        },
+        {
+            "program": "tkj",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "DASAR KOMPUTER & PERANGKAT KERAS",
+            "description": "Pengertian: Mengenal bagian-bagian komputer dan fungsinya, lalu belajar merakit dan menyalakannya. Ini dasar sebelum memasang sistem operasi dan membangun jaringan.",
+            "topics": [
+                "Komponen Komputer",
+                "Perakitan PC",
+                "BIOS dan Booting"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 4
+        },
+        {
+            "program": "tkj",
+            "grade": 11,
+            "type": null,
+            "semester": 1,
+            "title": "ADMINISTRASI SISTEM JARINGAN",
+            "description": "Mengelola server yang menyediakan layanan jaringan, seperti pembagian IP otomatis, nama domain, website, dan email.",
+            "topics": [
+                "Mengelola server yang menyediakan layanan jaringan",
+                "seperti pembagian IP otomatis",
+                "nama domain",
+                "website",
+                "dan email."
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 4
+        },
+        {
+            "program": "tkj",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "SISTEM OPERASI",
+            "description": "Pengertian: Sistem operasi adalah program utama yang mengatur kerja komputer, seperti Windows dan Linux. Di sini kamu belajar konsepnya dan cara memasangnya.",
+            "topics": [
+                "Konsep Sistem Operasi",
+                "Instalasi Windows",
+                "Pengenalan Linux"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 5
+        },
+        {
+            "program": "tkj",
+            "grade": 10,
+            "type": null,
+            "semester": 1,
+            "title": "DASAR JARINGAN KOMPUTER",
+            "description": "Pengertian: Jaringan komputer adalah hubungan antar perangkat agar bisa bertukar data dan berbagi sumber daya. Materi ini membahas jenis, bentuk, dan aturan dasarnya.",
+            "topics": [
+                "Konsep dan Jenis Jaringan",
+                "Topologi Jaringan",
+                "Model OSI dan TCP/IP"
+            ],
+            "week_start": 1,
+            "week_end": 1,
+            "color_theme": "blue",
+            "icon": null,
+            "image": null,
+            "order_number": 6
+        }
+    ],
+    "teachers": [
+        {
+            "program": "rpl",
+            "name": "Reny Murni Hidayati, M.Pd.",
+            "subject": "perencanaan Software, Bussiness Plan.",
+            "role_title": "Guru Produktif",
+            "description": "Guru Produktif Rekayasa Perangkat Lunak yang memiliki keahlian di bidang Perencanaan Software dan Business Plan.",
+            "expertise": "UI/UX",
+            "education": "S2 – Pendidikan Teknik Informatika",
+            "campus": "Universitas Negeri Yogyakarta (UNY)",
+            "photo": "images/eduroute/teachers/u29B4R78KhFtcTjqFE1OnlZi5ipPiZKl950noNcY.webp",
+            "order_number": 1,
+            "is_active": true
+        },
+        {
+            "program": "rpl",
+            "name": "Haris Budiawan, S.Pd.",
+            "subject": "Kaproli PPL",
+            "role_title": "Ketua Program Keahlian PPLG",
+            "description": "Guru Produktif Rekayasa Perangkat Lunak yang memiliki keahlian di bidang Basis Data dan AI",
+            "expertise": "Basis Data dan AI",
+            "education": "S1 - Pendidikan Teknik Informatika",
+            "campus": "Universitas Negeri Yogyakarta (UNY)",
+            "photo": "images/eduroute/teachers/fJqLDoE1Ho0Mmk0TfMyMnTOnDZbaodKNhkjXEcZr.webp",
+            "order_number": 2,
+            "is_active": true
+        },
+        {
+            "program": "rpl",
+            "name": "Rusdiyanto, S.Pd.",
+            "subject": "Elektronika, Web Server, dan Delphi Programming.",
+            "role_title": "Guru Produktif RPL",
+            "description": "Guru Produktif Rekayasa Perangkat Lunak yang memiliki keahlian di bidang Elektronika, Web Server, dan Delphi Programming.",
+            "expertise": "Basis Data",
+            "education": "S1 – Pendidikan Teknik Elektronika",
+            "campus": "Universitas Negeri Yogyakarta (UNY)",
+            "photo": "images/eduroute/teachers/XS1ClyK0ER0qlNCNtxKQI8cEdXBbQIG51YiCZ6ko.webp",
+            "order_number": 3,
+            "is_active": true
+        },
+        {
+            "program": "rpl",
+            "name": "Rosyida Ramadhani, S.Pd.",
+            "subject": "Mobile Programing Desktop Programing",
+            "role_title": "Guru Produktif RPL",
+            "description": "Guru Produktif Rekayasa Perangkat Lunak yang memiliki keahlian di bidang Mobile Programming dan Desktop Programming.",
+            "expertise": "Pemrograman",
+            "education": "S1 – Pendidikan Teknik Informatika",
+            "campus": "Universitas Negeri Yogyakarta (UNY)",
+            "photo": "images/eduroute/teachers/Mi2oF0xh7wnMOyTyyVqjm191gZA9Tbp5iuMCFGhe.webp",
+            "order_number": 4,
+            "is_active": true
+        },
+        {
+            "program": "rpl",
+            "name": "Diah Utaminingsih, S.T.",
+            "subject": "Cyber Security, Python, Administrasi Jaringan",
+            "role_title": "Guru Produktif RPL",
+            "description": "Guru Produktif Rekayasa Perangkat Lunak yang memiliki keahlian di bidang Cyber Security, Python, dan Administrasi Jaringan.",
+            "expertise": "Cyber Security",
+            "education": "S1 – Teknik Elektro",
+            "campus": "Universitas Gadjah Mada (UGM)",
+            "photo": "images/eduroute/teachers/37OB35mxHkY8rTAy7fcpFuYlBny86sPR5v8O2P09.webp",
+            "order_number": 5,
+            "is_active": true
+        },
+        {
+            "program": "rpl",
+            "name": "Dinda Ayu Dewanti, S.Kom.",
+            "subject": "Website Programming Database Internet of Things (IoT).",
+            "role_title": "Guru Produktif RPL",
+            "description": "Guru Produktif Rekayasa Perangkat Lunak yang memiliki keahlian di bidang Website Programming, Database, dan Internet of Things (IoT).",
+            "expertise": "Web Develpoment",
+            "education": "S1 – Teknik Komputer",
+            "campus": "UIN Sunan Kalijaga",
+            "photo": "images/eduroute/teachers/V2T8siBL8HAuvjXj1bQDm11OzF4WIA1bNN4Iegro.webp",
+            "order_number": 6,
+            "is_active": true
+        },
+        {
+            "program": "akl",
+            "name": "RESTY BUDI LESTARI",
+            "subject": "web dev",
+            "role_title": null,
+            "description": "KSAKSKSSK",
+            "expertise": null,
+            "education": null,
+            "campus": null,
+            "photo": "images/eduroute/teachers/XGPbXHvlTw4GC2KONoWVZVfrvgoAySKcBsf9slXd.jpg",
+            "order_number": 0,
+            "is_active": true
+        }
+    ],
+    "careers": [
+        {
+            "program": "rpl",
+            "title": "Web Developer",
+            "short_description": "Membuat dan mengembangkan website serta aplikasi berbasis web.",
+            "details": "Web developer membangun website dan aplikasi yang dibuka lewat browser — dari halaman company profile sampai sistem informasi sekolah. Ia mengubah kebutuhan pengguna menjadi halaman yang bisa diakses lewat internet, lalu memastikan website tetap berjalan, cepat, dan aman.",
+            "tasks": [
+                "Mengubah desain menjadi halaman web yang bisa dibuka",
+                "Menghubungkan tampilan dengan data dari server",
+                "Memperbaiki error dan menguji di berbagai browser",
+                "Merawat dan memperbarui website yang sudah berjalan"
+            ],
+            "tools": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "PHP & Laravel"
+            ],
+            "icon": "code",
+            "order_number": 1,
+            "is_active": true
+        },
+        {
+            "program": "rpl",
+            "title": "Frontend Developer",
+            "short_description": "Membuat tampilan website agar nyaman, interaktif, dan responsif.",
+            "details": "Frontend developer fokus pada bagian yang dilihat dan disentuh pengguna: tampilan, tombol, animasi, dan interaksi. Ia memastikan website nyaman dipakai, terlihat rapi, dan tetap bagus dibuka di HP maupun laptop.",
+            "tasks": [
+                "Membuat layout yang rapi di semua ukuran layar",
+                "Menambahkan interaksi seperti menu, slider, dan form",
+                "Menyesuaikan tampilan antar browser",
+                "Bekerja sama dengan UI/UX designer"
+            ],
+            "tools": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Tailwind CSS"
+            ],
+            "icon": "layout",
+            "order_number": 2,
+            "is_active": true
+        },
+        {
+            "program": "rpl",
+            "title": "Backend Developer",
+            "short_description": "Mengelola logika, server, database, dan sistem di balik aplikasi.",
+            "details": "Backend developer mengurus \"dapur\" aplikasi: logika, server, dan database yang tidak terlihat pengguna. Saat kamu login, menyimpan data, atau checkout belanja — kodenya yang memastikan semuanya tersimpan dan berjalan dengan benar.",
+            "tasks": [
+                "Membuat logika aplikasi dan API",
+                "Merancang dan mengelola database",
+                "Mengatur keamanan seperti login dan hak akses",
+                "Menjaga server tetap stabil dan cepat"
+            ],
+            "tools": [
+                "PHP",
+                "Laravel",
+                "MySQL",
+                "REST API"
+            ],
+            "icon": "server",
+            "order_number": 3,
+            "is_active": true
+        },
+        {
+            "program": "rpl",
+            "title": "Full Stack Developer",
+            "short_description": "Mengembangkan bagian frontend dan backend dalam satu aplikasi.",
+            "details": "Full stack developer menguasai frontend sekaligus backend, sehingga bisa membangun aplikasi lengkap — dari tampilan sampai server dan database. Profesi ini cocok untuk tim kecil, startup, atau project freelance.",
+            "tasks": [
+                "Membangun tampilan sekaligus sistem aplikasi",
+                "Merancang alur data dari depan sampai belakang",
+                "Melakukan testing dan upload aplikasi ke server",
+                "Memelihara seluruh bagian aplikasi"
+            ],
+            "tools": [
+                "JavaScript",
+                "PHP & Laravel",
+                "MySQL",
+                "Git"
+            ],
+            "icon": "layers",
+            "order_number": 4,
+            "is_active": true
+        },
+        {
+            "program": "rpl",
+            "title": "Mobile App Developer",
+            "short_description": "Membuat aplikasi untuk perangkat Android dan iOS.",
+            "details": "Mobile app developer membuat aplikasi HP seperti ojek online, e-wallet, atau aplikasi absensi sekolah. Ia memikirkan layar kecil, sentuhan jari, baterai, dan notifikasi agar aplikasi nyaman dipakai setiap hari.",
+            "tasks": [
+                "Membangun aplikasi Android dan iOS",
+                "Menghubungkan aplikasi dengan server",
+                "Menguji di berbagai tipe dan ukuran HP",
+                "Mempublikasikan ke Play Store / App Store"
+            ],
+            "tools": [
+                "Flutter",
+                "Dart",
+                "Kotlin",
+                "Firebase"
+            ],
+            "icon": "smartphone",
+            "order_number": 5,
+            "is_active": true
+        },
+        {
+            "program": "rpl",
+            "title": "Game Developer",
+            "short_description": "Mengembangkan game mulai dari sistem, gameplay, hingga fitur interaktif.",
+            "details": "Game developer membuat permainan — dari game HP sederhana sampai game PC. Ia mengatur aturan main, pergerakan karakter, skor, dan level, lalu menambahkan suara dan efek agar game seru dimainkan.",
+            "tasks": [
+                "Membuat aturan main dan alur permainan",
+                "Memprogram karakter, level, dan sistem skor",
+                "Menambahkan suara dan efek visual",
+                "Menguji game dan memperbaiki bug"
+            ],
+            "tools": [
+                "Unity",
+                "C#",
+                "Logika Game",
+                "Problem Solving"
+            ],
+            "icon": "gamepad",
+            "order_number": 6,
+            "is_active": true
+        },
+        {
+            "program": "rpl",
+            "title": "UI/UX Designer",
+            "short_description": "Merancang tampilan dan pengalaman pengguna agar mudah digunakan.",
+            "details": "UI/UX designer merancang tampilan (UI) dan pengalaman (UX) aplikasi. Bedanya dengan frontend: ia tidak selalu coding, tapi riset dan menggambar rancangan agar aplikasi mudah dipakai — bahkan oleh orang yang gaptek.",
+            "tasks": [
+                "Mencari tahu kebutuhan dan kebiasaan pengguna",
+                "Membuat sketsa, wireframe, dan prototype",
+                "Menguji rancangan langsung ke pengguna",
+                "Bekerja sama dengan developer saat implementasi"
+            ],
+            "tools": [
+                "Figma",
+                "Wireframing",
+                "Prototyping",
+                "Riset Pengguna"
+            ],
+            "icon": "pen",
+            "order_number": 7,
+            "is_active": true
+        },
+        {
+            "program": "rpl",
+            "title": "Software Developer",
+            "short_description": "Membuat dan mengembangkan berbagai jenis aplikasi atau perangkat lunak.",
+            "details": "Software developer membuat perangkat lunak secara umum — bisa aplikasi desktop, sistem kasir, atau sistem informasi perusahaan. Ia menganalisis kebutuhan, menulis kode, lalu memastikan software berjalan sesuai harapan pengguna.",
+            "tasks": [
+                "Menganalisis kebutuhan pengguna software",
+                "Menulis kode yang rapi dan terstruktur",
+                "Menguji software sebelum dipakai",
+                "Memperbarui dan memperbaiki software"
+            ],
+            "tools": [
+                "Java",
+                "Python",
+                "SQL",
+                "Git"
+            ],
+            "icon": "monitor",
+            "order_number": 8,
+            "is_active": true
+        },
+        {
+            "program": "rpl",
+            "title": "Database Administrator",
+            "short_description": "Mengelola database agar data tersimpan rapi, aman, dan mudah digunakan.",
+            "details": "Database administrator menjaga \"gudang data\" aplikasi. Data nilai siswa, transaksi toko, atau akun pengguna harus tersimpan rapi, cepat dicari, aman dari pihak yang tidak berhak, dan tidak hilang saat gangguan.",
+            "tasks": [
+                "Merancang struktur dan relasi database",
+                "Mengatur backup dan pengamanan data",
+                "Mempercepat pencarian data yang lambat",
+                "Memulihkan data saat terjadi gangguan"
+            ],
+            "tools": [
+                "MySQL",
+                "PostgreSQL",
+                "SQL",
+                "Backup & Recovery"
+            ],
+            "icon": "database",
+            "order_number": 9,
+            "is_active": true
+        },
+        {
+            "program": "rpl",
+            "title": "Software QA / Tester",
+            "short_description": "Menguji aplikasi untuk menemukan kesalahan dan memastikan kualitasnya.",
+            "details": "QA/tester adalah \"pemecah aplikasi\" profesional: tugasnya mencari kesalahan sebelum pengguna menemukannya. Ia mencoba semua skenario — termasuk yang tidak terpikirkan pembuatnya — agar aplikasi rilis tanpa bug yang memalukan.",
+            "tasks": [
+                "Menyusun skenario pengujian aplikasi",
+                "Mencoba aplikasi dan mencatat setiap bug",
+                "Memastikan perbaikan benar-benar beres",
+                "Membuat laporan kualitas sebelum rilis"
+            ],
+            "tools": [
+                "Manual Testing",
+                "Test Case",
+                "Bug Report",
+                "Ketelitian"
+            ],
+            "icon": "checklist",
+            "order_number": 10,
+            "is_active": true
+        },
+        {
+            "program": "rpl",
+            "title": "IT Support",
+            "short_description": "Membantu menangani masalah komputer, jaringan, software, dan perangkat IT.",
+            "details": "IT support adalah \"dokter\" komputer di kantor atau sekolah. Printer error, WiFi mati, laptop lemot, software tidak bisa dibuka — dialah orang pertama yang dipanggil, lalu menjelaskan solusinya dengan bahasa yang mudah dipahami.",
+            "tasks": [
+                "Memperbaiki komputer, laptop, dan printer",
+                "Menangani gangguan jaringan dan WiFi",
+                "Membantu instalasi dan setting software",
+                "Melayani dan mencatat keluhan pengguna"
+            ],
+            "tools": [
+                "Hardware",
+                "Jaringan Dasar",
+                "Troubleshooting",
+                "Komunikasi"
+            ],
+            "icon": "headset",
+            "order_number": 11,
+            "is_active": true
+        },
+        {
+            "program": "rpl",
+            "title": "Cyber Security",
+            "short_description": "Melindungi sistem, jaringan, dan data dari ancaman keamanan.",
+            "details": "Spesialis keamanan siber melindungi sistem dari hacker, virus, dan pencurian data. Ia mencari celah keamanan sebelum penjahat menemukannya, memantau serangan yang masuk, dan bereaksi cepat saat insiden terjadi.",
+            "tasks": [
+                "Memeriksa celah keamanan sistem",
+                "Memantau dan menanggapi serangan",
+                "Mengamankan jaringan dan server",
+                "Mengedukasi pengguna tentang keamanan"
+            ],
+            "tools": [
+                "Jaringan",
+                "Linux",
+                "Analisis Ancaman",
+                "Etika Hacking"
+            ],
+            "icon": "shield",
+            "order_number": 12,
+            "is_active": true
+        },
+        {
+            "program": "rpl",
+            "title": "DevOps Engineer",
+            "short_description": "Mengelola proses deployment, server, otomatisasi, dan operasional aplikasi.",
+            "details": "DevOps engineer memastikan aplikasi bisa diperbarui dan online tanpa drama. Ia mengotomatisasi proses upload aplikasi ke server, sehingga developer bisa merilis fitur baru dengan cepat, sering, dan aman.",
+            "tasks": [
+                "Mengotomatisasi proses upload aplikasi",
+                "Mengelola server dan layanan cloud",
+                "Memantau aplikasi agar selalu online",
+                "Mempercepat dan mengamankan proses rilis"
+            ],
+            "tools": [
+                "Linux",
+                "Docker",
+                "CI/CD",
+                "Cloud"
+            ],
+            "icon": "cloud",
+            "order_number": 13,
+            "is_active": true
+        },
+        {
+            "program": "rpl",
+            "title": "IT Consultant",
+            "short_description": "Memberikan solusi dan saran teknologi sesuai kebutuhan organisasi atau bisnis.",
+            "details": "IT consultant memberi saran teknologi ke perusahaan: software apa yang cocok, sistem seperti apa yang dibutuhkan, dan bagaimana teknologi bisa menghemat biaya. Profesi ini memadukan kemampuan teknis dengan komunikasi dan analisis bisnis.",
+            "tasks": [
+                "Menganalisis kebutuhan teknologi bisnis",
+                "Menyusun rekomendasi solusi yang tepat",
+                "Mendampingi penerapan sistem baru",
+                "Melatih pengguna menggunakan sistem"
+            ],
+            "tools": [
+                "Analisis Sistem",
+                "Komunikasi",
+                "Manajemen Proyek",
+                "Bisnis & IT"
+            ],
+            "icon": "bulb",
+            "order_number": 14,
+            "is_active": true
+        },
+        {
+            "program": "akl",
+            "title": "STAF AKUNTANSI",
+            "short_description": "Bertanggung jawab atas pencatatan arus kas perusahaan sehari-hari dan memastikan setiap transaksi memiliki bukti yang sah sesuai standar akuntansi.",
+            "details": "Staf Akuntansi: Bertanggung jawab mencatat arus kas perusahaan sehari-hari dan memastikan setiap transaksi memiliki bukti sah sesuai standar akuntansi",
+            "tasks": [
+                "Menginput data pemasukan dan pengeluaran harian",
+                "Melakukan rekonsiliasi kas dan bank setiap akhir bulan",
+                "Menyusun laporan keuangan seperti laporan laba rugi",
+                "Membantu proses penghitungan pajak perusahaan"
+            ],
+            "tools": [
+                "Microsoft Excel",
+                "MYOB",
+                "Zahir Accounting",
+                "Pemahaman Jurnal Akuntansi"
+            ],
+            "icon": null,
+            "order_number": 0,
+            "is_active": true
+        },
+        {
+            "program": "bd",
+            "title": "DIGITAL MARKETER",
+            "short_description": "Deskripsi: Merancang dan menjalankan kampanye promosi suatu produk atau jasa melalui berbagai platform internet untuk menjangkau target pasar.",
+            "details": "igital Marketer: Bertugas merancang strategi dan menjalankan kampanye promosi produk atau jasa melalui platform internet untuk menjangkau target pasar",
+            "tasks": [
+                "Mengoordinasikan jadwal kerja harian pramuniaga.\r\nMemastikan stok barang di gudang dan rak selalu tercukupi",
+                "Mengawasi penataan produk agar menarik minat beli",
+                "Menangani keluhan pelanggan yang tidak bisa diselesaikan staf biasa"
+            ],
+            "tools": [
+                "najemen Tim",
+                "Microsoft Office",
+                "Point of Sales",
+                "Inventory Management."
+            ],
+            "icon": null,
+            "order_number": 0,
+            "is_active": true
+        },
+        {
+            "program": "br",
+            "title": "STORE SUPERVISOR",
+            "short_description": "Memimpin operasional toko ritel sehari-hari, memastikan barang tersedia, target penjualan tercapai, dan pelayanan berjalan maksimal.",
+            "details": "Memimpin kegiatan operasional harian toko ritel, memastikan ketersediaan barang, serta memastikan tercapainya target penjualan dan pelayanan yang maksimaL",
+            "tasks": [
+                "Mengoordinasikan jadwal kerja harian pramuniaga.\r\nMemastikan stok barang di gudang dan rak selalu tercukupi",
+                "Mengawasi penataan produk agar menarik minat beli",
+                "Menangani keluhan pelanggan yang tidak bisa diselesaikan staf biasa"
+            ],
+            "tools": [
+                "Manajemen Tim",
+                "Microsoft Office",
+                "Point of Sales",
+                "Inventory Management."
+            ],
+            "icon": null,
+            "order_number": 0,
+            "is_active": true
+        },
+        {
+            "program": "dkv",
+            "title": "GRAPHIC DESIGNER",
+            "short_description": "Menciptakan solusi visual untuk mengomunikasikan ide, merancang elemen promosi, identitas perusahaan, maupun edukasi.",
+            "details": "Berperan menciptakan solusi visual untuk menyampaikan ide, serta merancang elemen promosi dan identitas visual perusahaan.",
+            "tasks": [
+                "Merancang logo",
+                "identitas merek",
+                "dan palet warna perusahaan.\r\nMembuat desain kemasan produk",
+                "poster",
+                "atau spanduk cetak",
+                "Menghasilkan aset konten visual untuk media sosial",
+                "Merevisi karya desain berdasarkan umpan balik klien"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "Adobe Photoshop",
+                "CorelDraw",
+                "Teori Warna."
+            ],
+            "icon": null,
+            "order_number": 0,
+            "is_active": true
+        },
+        {
+            "program": "lps",
+            "title": "CUSTOMER SERVICE BANK SYARIAH",
+            "short_description": "Memberikan penjelasan produk keuangan berlandaskan prinsip syariat Islam dan membantu keperluan administrasi nasabah di garda terdepan",
+            "details": "Bertugas di garda terdepan untuk memberikan penjelasan mengenai produk keuangan berlandaskan syariat Islam serta membantu keperluan administrasi nasabah.",
+            "tasks": [
+                "Melayani proses pembukaan dan penutupan rekening",
+                "Menjelaskan konsep akad syariah kepada calon nasabah",
+                "Menerima dan memberikan solusi atas keluhan transaksi",
+                "Membantu pemblokiran dan pencetakan ulang kartu ATM"
+            ],
+            "tools": [
+                "Komunikasi Interpersonal",
+                "Pemahaman Fiqih Muamalah",
+                "Sistem Core Banking."
+            ],
+            "icon": null,
+            "order_number": 0,
+            "is_active": true
+        },
+        {
+            "program": "mp",
+            "title": "STAF ADMINISTRASI",
+            "short_description": "Mengatur jalannya kegiatan operasional kantor agar rapi, memastikan kelengkapan dokumen, dan kelancaran korespondensi.",
+            "details": "Mengatur jalannya operasional kantor, menjaga kelengkapan dan kerapian dokumen, serta memastikan kelancaran korespondensi perusahaan.",
+            "tasks": [
+                "Membuat",
+                "menyortir",
+                "dan mengarsipkan surat masuk dan keluar.\r\nMemasukkan data-data perusahaan ke dalam sistem komputer",
+                "Mengatur jadwal pertemuan",
+                "rapat",
+                "atau agenda atasan",
+                "Merekap absensi dan kebutuhan barang inventaris kantor"
+            ],
+            "tools": [
+                "Pengarsipan Dokumen",
+                "Microsoft Word",
+                "Microsoft Excel",
+                "Etika Korespondensi."
+            ],
+            "icon": null,
+            "order_number": 0,
+            "is_active": true
+        },
+        {
+            "program": "tkj",
+            "title": "NETWORK ADMINISTRATOR",
+            "short_description": "bertugas merancang, mengonfigurasi, dan merawat infrastruktur jaringan komputer agar lalu lintas komunikasi data berjalan stabil, aman, dan efisien",
+            "details": "Bertugas merancang, mengonfigurasi, dan merawat infrastruktur jaringan komputer di sebuah instansi agar komunikasi data berjalan stabil, efisien, dan aman.",
+            "tasks": [
+                "Menarik. memasang dan melakukan crimping kabel jaringan",
+                "Mengatur konfigurasi router switch",
+                "dan firewall",
+                "Memonitor lalu lintas jaringan untuk mencegah downtime",
+                "Mengatasi masalah konektivitas pada komputer klien."
+            ],
+            "tools": [
+                "Mikrotik",
+                "Cisco",
+                "Manajemen IP Address",
+                "Winbox",
+                "Linux Server."
+            ],
+            "icon": null,
+            "order_number": 0,
+            "is_active": true
+        },
+        {
+            "program": "tkj",
+            "title": "IT SUPPORT",
+            "short_description": "Membantu menangani masalah komputer, jaringan, software, dan perangkat IT.",
+            "details": "Berperan dalam membantu dan menangani masalah yang berkaitan dengan perangkat keras komputer, jaringan, dan perangkat lunak.",
+            "tasks": [
+                "●\tMerakit",
+                "memperbaiki",
+                "dan merawat perangkat keras.\r\n●\tMelakukan instalasi sistem operasi dan perangkat lunak perkantoran",
+                "●\tMengatur instalasi printer maupun pemindai",
+                "●\tMemberikan panduan teknis dasar kepada pengguna"
+            ],
+            "tools": [
+                "Hardware Troubleshooting",
+                "Instalasi OS",
+                "Manajemen Perangkat Periferal."
+            ],
+            "icon": null,
+            "order_number": 0,
+            "is_active": true
+        }
+    ],
+    "achievements": [
+        {
+            "program": "rpl",
+            "title": "Siswa RPL SMKN 1 Bantul Raih Prestasi Gemilang di Kejuaraan Bulutangkis 2026",
+            "name": "Fachila Marela Saputra",
+            "date_label": "30 Aug 2026",
+            "category": "Kompetisi",
+            "level": "Provinsi",
+            "description": "Capaian ini menjadi bukti nyata bahwa semangat siswa SKANSABA.DEV tidak hanya membara di depan layar komputer dan baris kode (coding), tetapi juga tangguh dan berprestasi di arena olahraga. Kedisiplinan serta kerja keras Fadhila berhasil membuahkan hasil yang mengharumkan nama jurusan dan sekolah.\r\n\r\nKeberhasilan ini tentu tidak lepas dari sinergi dan dukungan seluruh warga sekolah. Segenap tim SKANSABA.DEV dan keluarga besar RPL mengucapkan terima kasih yang sebesar-besarnya atas doa, bimbingan, serta dukungan tiada henti dari Bapak/Ibu guru dan seluruh civitas akademika SMKN 1 Bantul.\r\n\r\nSemoga pencapaian ini menjadi pemantik semangat bagi seluruh siswa RPL untuk terus mengasah potensi, pantang menyerah, dan berani berprestasi di bidang apa pun yang ditekuni. Selamat dan sukses selalu untuk Fadhila Marele S!",
+            "image": "images/eduroute/achievements/Dae0uG1r2q95IT2M6BH1y7JDdejKht920KE3Tmaq.webp",
+            "order_number": 1,
+            "is_active": true
+        },
+        {
+            "program": "rpl",
+            "title": "Juara 1 Logic Code TOP RANK AMIKOM 2026",
+            "name": "Abid Muhammad Rasyid",
+            "date_label": "02 Jul 2026",
+            "category": "Kompetisi",
+            "level": "Nasional",
+            "description": "Ajang nasional yang diselenggarakan oleh Inkubator AMIKOM Business Park ini menjadi wadah pengujian ketajaman logika, problem solving, dan kedalaman pemahaman rekayasa perangkat lunak. Keberhasilan Abid menjadi yang terbaik di kategori Logic Code semakin mengukuhkan keunggulan dan daya saing talenta-talenta muda dari SKANSABA.DEV.\r\n\r\nKeluarga besar Konsentrasi Keahlian RPL SMKN 1 Bantul mengucapkan selamat yang sebesar-besarnya kepada Abid Muhammad Rasyid atas kerja keras dan dedikasinya. Tak lupa, apresiasi dan ucapan terima kasih disampaikan kepada Bapak/Ibu guru pembimbing serta seluruh pihak atas doa dan dukungannya.\r\n\r\nSemoga capaian luar biasa ini menjadi inspirasi dan pemicu semangat bagi seluruh siswa RPL untuk terus berkarya, mengasah keahlian programming, dan percaya diri bersaing di tingkat nasional!",
+            "image": "images/eduroute/achievements/a3rk3hdquS8IgaEh96M98b9PVW72yf71dR39TnAn.webp",
+            "order_number": 2,
+            "is_active": true
+        },
+        {
+            "program": "rpl",
+            "title": "Siswa RPL SMKN 1 Bantul Raih Prestasi di LKS Tingkat Provinsi",
+            "name": "Tim LKS Web Tech",
+            "date_label": "10 Apr 2026",
+            "category": "Akademik",
+            "level": "Provinsi",
+            "description": "Apresiasi dan Harapan Kepala SMKN 1 Bantul, Raharjo, S.I.P., M.Pd., memberikan apresiasi setinggi-tingginya kepada para siswa dan guru pembimbing yang telah bekerja keras mempersiapkan diri menghadapi kompetisi tingkat provinsi ini. Keberhasilan menyabet tiga gelar juara ketiga di bidang yang berbeda menunjukkan kedalaman skill yang dimiliki oleh siswa RPL SMKN 1 Bantul.\r\n\r\nPencapaian ini diharapkan dapat menjadi motivasi bagi seluruh siswa untuk terus mengasah kompetensi dan berani berkompetisi di tingkat yang lebih tinggi. Selamat kepada para pemenang! Teruslah berkarya dan membanggakan almamate",
+            "image": "images/eduroute/achievements/PTDmEa8rY4bo4lIrRRYawx7AuGxgcmZFUcwdhTAV.webp",
+            "order_number": 3,
+            "is_active": true
+        },
+        {
+            "program": "rpl",
+            "title": "SMKN 1 Bantul Raih Juara 1 & 3 dalam Mini Hackathon",
+            "name": "Tim Hackathon RPL",
+            "date_label": "14 Feb 2026",
+            "category": "Kompetisi",
+            "level": "Nasional",
+            "description": "Solusi Digital untuk Budaya Lokal Mengangkat tema pengembangan produk digital berbasis kecerdasan buatan (AI) untuk melestarikan kekayaan budaya Yogyakarta, tim SMKN 1 Bantul berhasil menunjukkan kemampuan teknis yang luar biasa dalam pengolahan kode serta presentasi produk. Kemenangan ganda ini membuktikan bahwa siswa SMKN 1 Bantul mampu bersaing dan memberikan solusi nyata yang inovatif.\r\n\r\nKeberhasilan ini disambut dengan sukacita oleh seluruh warga sekolah. Prestasi ini juga mempertegas posisi SMKN 1 Bantul sebagai salah satu sekolah kejuruan yang unggul dalam mencetak programmer dan pengembang teknologi masa depan.\r\n\r\nSelamat kepada para pemenang! Teruslah berkarya, berinovasi, dan menjadi inspirasi bagi rekan-rekan lainnya untuk terus mengasah skill di dunia teknologi informasi.",
+            "image": "images/eduroute/achievements/HbydDcQhzH0GK8ztO1HB6yJNRVYBYcoCu2P6t0su.webp",
+            "order_number": 4,
+            "is_active": true
+        },
+        {
+            "program": "rpl",
+            "title": "Juara 8 tingkat Nasional Cyber Security School Competition Komdigi",
+            "name": "Muhammad Nur Fikri",
+            "date_label": "30 Jan 2026",
+            "category": "Kompetisi",
+            "level": "Nasional",
+            "description": "Kompetisi yang berlangsung di Universitas AMIKOM Yogyakarta ini diikuti oleh ratusan talenta muda dari berbagai daerah di Indonesia yang menguji kemampuan mereka dalam bidang keamanan siber dan perlindungan data.\r\n\r\nPeringkat 8 Nasional dan Hadiah Beasiswa Dalam persaingan yang sangat ketat tersebut, Muhammad Nur Fakhri berhasil menduduki peringkat ke-8 secara nasional. Atas pencapaian luar biasa ini, Fakhri tidak hanya membawa pulang piagam penghargaan, tetapi juga mendapatkan hadiah berupa beasiswa pendidikan di Universitas AMIKOM Yogyakarta.\r\n\r\nPrestasi ini menjadi bukti nyata bahwa kurikulum dan pembinaan di SMKN 1 Bantul mampu mencetak tenaga ahli muda yang siap menghadapi tantangan di era digital, khususnya dalam menghadapi ancaman serangan siber yang semakin kompleks.\r\n\r\nDukungan Sekolah Keberhasilan ini disambut bangga oleh keluarga besar SMKN 1 Bantul. Pihak sekolah berharap prestasi yang diraih Fakhri dapat menjadi inspirasi bagi siswa-siswi lainnya untuk mendalami bidang keamanan informasi yang saat ini sangat dibutuhkan oleh industri global.\r\n\r\nKepala SMKN 1 Bantul, Raharjo, S.I.P., M.Pd., memberikan apresiasi tinggi atas semangat juang Fakhri dan berharap beasiswa yang didapatkan dapat menjadi jembatan untuk meraih cita-cita yang lebih tinggi di masa depan.\r\n\r\nSelamat kepada Muhammad Nur Fakhri atas prestasinya yang mengharumkan nama sekolah dan Yogyakarta di kancah nasional!",
+            "image": "images/eduroute/achievements/IxjqYYr3CAXnEcABlU0UnEftLmnaUJ9V8JN3HEmO.webp",
+            "order_number": 5,
+            "is_active": true
+        },
+        {
+            "program": "rpl",
+            "title": "Juara 1 Indonesian International Applied Science Project",
+            "name": "Refand Gracias Natanael",
+            "date_label": "12 Dec 2025",
+            "category": "Kompetisi",
+            "level": "Internasional",
+            "description": "Proyek ini menggabungkan kecanggihan kecerdasan buatan (AI) dengan sektor pertanian. Sistem yang dikembangkan mampu melakukan optimasi iklim mikro secara otomatis di dalam rumah kaca, sekaligus memberikan konsultasi strategis bagi pengelola. Keunggulan teknologi ini terletak pada kemampuannya meningkatkan efisiensi hasil panen melalui analisis data yang presisi.\r\n\r\nKemenangan yang Menginspirasi Setelah melalui tahapan presentasi dan tanya jawab yang ketat pada Desember 2025 lalu, tim Refand akhirnya dinyatakan sebagai yang terbaik dan berhak membawa pulang Medali Emas. Keberhasilan ini membuktikan bahwa siswa SMK memiliki kompetensi yang setara, bahkan unggul, dalam penguasaan teknologi tingkat tinggi seperti Artificial Intelligence dan Software Engineering.\r\n\r\nApresiasi dari Sekolah Kepala SMKN 1 Bantul memberikan apresiasi setinggi-tingginya atas dedikasi dan kerja keras yang telah ditunjukkan. Kemenangan ini diharapkan tidak hanya menjadi kebanggaan bagi Refand secara pribadi, tetapi juga menjadi pemantik semangat bagi seluruh siswa SMKN 1 Bantul untuk terus berinovasi dan tidak takut bersaing di level global.\r\n\r\nSelamat kepada Refand Gracias Natanael Lumban Tobing! Teruslah berkarya dan memberikan solusi nyata bagi masyarakat melalui teknologi.",
+            "image": "images/eduroute/achievements/SgwGo6cDPfPdjGir5E8DeKCKvFul0zbmfZn5TKOm.webp",
+            "order_number": 6,
+            "is_active": true
+        },
+        {
+            "program": "rpl",
+            "title": "Lomba Website Nasional JHIC 2025 di Surabaya",
+            "name": "M. Adib Faturrohman",
+            "date_label": "05 Nov 2025",
+            "category": "Kompetisi",
+            "level": "Nasional",
+            "description": "Perjuangan para siswa ini didampingi oleh dua guru pembimbing, yaitu Haris Budiawan, S.Pd. dan Dinda Ayu Dewanti, S.Kom..Kompetisi Tingkat Nasional JHIC 2025 yang didukung oleh KOMDIGI, Jagoan Hosting, dan Maspion IT merupakan ajang bergengsi bagi siswa SMK untuk menunjukkan kemampuannya dalam membangun infrastruktur digital sekolah.\r\n\r\nKeberhasilan masuk ke tahap Grand Final menunjukkan bahwa kualitas teknis dan kreativitas siswa SMKN 1 Bantul telah diakui secara nasional.Kepala SMKN 1 Bantul, Raharjo, S.I.P., M.Pd., memberikan dukungan penuh dan berharap tim dapat memberikan performa terbaiknya di hadapan para juri. Keterlibatan siswa dalam kompetisi ini juga sejalan dengan komitmen sekolah untuk terus mencetak lulusan yang kompeten di bidang teknologi digital.",
+            "image": "images/eduroute/achievements/FbpH7EKV7U133bOCKKIIuJsflo8S1tCwR66AhmWU.webp",
+            "order_number": 7,
+            "is_active": true
+        },
+        {
+            "program": "rpl",
+            "title": "Siswa RPL SMKN 1 Bantul Sabet Medali Perak di UGM Taekwondo Championship 2026",
+            "name": "Maden Haryo Wicaksono",
+            "date_label": "30 aug 2026",
+            "category": "Kompetisi",
+            "level": "Nasional",
+            "description": "Pencapaian ini membuktikan bahwa talenta siswa-siswi di portal SKANSABA.DEV sangatlah beragam. Tidak hanya unggul dalam logika pemrograman dan rekayasa perangkat lunak, siswa RPL juga memiliki kedisiplinan tinggi, fisik yang tangguh, serta mental juara di gelanggang olahraga.\r\n\r\nKeluarga besar RPL SMKN 1 Bantul mengucapkan selamat kepada Maden Haryo Wicaksono atas perjuangan dan hasil terbaik yang telah diraih. Terima kasih yang sebesar-besarnya juga kami haturkan kepada Bapak/Ibu guru, pelatih, serta seluruh teman-teman atas doa dan dukungannya.\r\n\r\nSemoga keberhasilan ini menjadi dorongan semangat bagi Maden untuk terus mengukir prestasi yang lebih tinggi di masa depan, sekaligus menginspirasi seluruh siswa RPL untuk pantang menyerah dalam mengejar cita-cita dan bakat masing-masing!",
+            "image": "images/eduroute/achievements/EmWEU3Orhd2EKz1SJ7xllqpK6CKVjI2MeqGorR3d.webp",
+            "order_number": 8,
+            "is_active": true
+        },
+        {
+            "program": "akl",
+            "title": "[Contoh] Juara Lomba Akuntansi",
+            "name": "Tim Contoh",
+            "date_label": "2026",
+            "category": "Kompetisi",
+            "level": "Sekolah",
+            "description": "Data contoh untuk pengujian CMS.",
+            "image": null,
+            "order_number": 1,
+            "is_active": true
+        }
+    ],
+    "media": [
+        {
+            "program": "rpl",
+            "platform": "Website",
+            "handle": "SKANSABA.DEV",
+            "description": "Website resmi Jurusan RPL.",
+            "url": "https://skansaba.dev/",
+            "image": null,
+            "order_number": 1,
+            "is_active": true
+        },
+        {
+            "program": "rpl",
+            "platform": "Instagram",
+            "handle": "@skansaba.dev",
+            "description": "Aktivitas harian, dokumentasi kegiatan, dan event di jurusan RPL.",
+            "url": "https://www.instagram.com/skansaba.dev",
+            "image": null,
+            "order_number": 2,
+            "is_active": true
+        },
+        {
+            "program": "akl",
+            "platform": "Instagram",
+            "handle": "@contoh.akl",
+            "description": "Data contoh kanal media untuk pengujian CMS.",
+            "url": null,
+            "image": null,
+            "order_number": 1,
+            "is_active": true
+        }
+    ],
+    "partners": [
+        {
+            "program": "rpl",
+            "name": "PT FARMA GLOBAL TEKNOLOGI",
+            "website_url": "https://farmagitechs.co.id/",
+            "logo": "https://farmagitechs.co.id/wp-content/themes/fg-theme/assets/images/base/fg_logo.svg",
+            "logo_bg_color": null,
+            "order_number": 1,
+            "is_active": true
+        },
+        {
+            "program": "rpl",
+            "name": "PT Gamatechno Indonesia",
+            "website_url": "https://www.gamatechno.com/",
+            "logo": "https://www.gamatechno.com/wp-content/uploads/2019/10/logoGT-putih-tagline.png",
+            "logo_bg_color": "#B3B3B3",
+            "order_number": 2,
+            "is_active": true
+        },
+        {
+            "program": "rpl",
+            "name": "PT Global Intermedia",
+            "website_url": "https://www.gi.co.id/",
+            "logo": "https://www.gi.co.id/dist/images/logo_gi.png",
+            "logo_bg_color": null,
+            "order_number": 3,
+            "is_active": true
+        },
+        {
+            "program": "rpl",
+            "name": "PT Techno Medic",
+            "website_url": "https://www.technomedic.id/web/",
+            "logo": "images/eduroute/partners/bKfBaOHepT4KxWKEJPsyFw0rFCsWoAgcTXD3oTBv.png",
+            "logo_bg_color": null,
+            "order_number": 4,
+            "is_active": true
+        },
+        {
+            "program": "rpl",
+            "name": "Lembaga Sistem Informasi UMY",
+            "website_url": "https://ddi.umy.ac.id/",
+            "logo": "https://skansaba.dev/storage/mitra/69f2d808448e9_1777522696.webp",
+            "logo_bg_color": null,
+            "order_number": 5,
+            "is_active": true
+        },
+        {
+            "program": "rpl",
+            "name": "PT BPR BANK BANTUL",
+            "website_url": "https://bankbantul.co.id/",
+            "logo": "images/eduroute/partners/WTOvRrQn8gxaCIVTsL5DRiaLRbfYfxKxLpnqbQUz.png",
+            "logo_bg_color": null,
+            "order_number": 6,
+            "is_active": true
+        },
+        {
+            "program": "rpl",
+            "name": "CV. Bursa Multimedia Group",
+            "website_url": "https://bursamultimediagroup.web.indotrading.com/",
+            "logo": "images/eduroute/partners/7RKzeJN0pko6fP3GWky0nyjWT1dXpzqEDx9yEBLs.webp",
+            "logo_bg_color": null,
+            "order_number": 7,
+            "is_active": true
+        },
+        {
+            "program": "rpl",
+            "name": "CV Sinergi Telematika",
+            "website_url": null,
+            "logo": "images/eduroute/partners/mb6QMzcDTHJ2j4kPPOKgK7Q2bXBQ2OuR5wHNaEh7.png",
+            "logo_bg_color": null,
+            "order_number": 8,
+            "is_active": true
+        },
+        {
+            "program": "rpl",
+            "name": "PT. Global Prima Utama",
+            "website_url": null,
+            "logo": "images/eduroute/partners/2W2OR1xP2fCZEaCbVfKYzandjhNeTSi9RvjUeYcS.webp",
+            "logo_bg_color": null,
+            "order_number": 9,
+            "is_active": true
+        },
+        {
+            "program": "rpl",
+            "name": "Creativemu ID",
+            "website_url": "https://creativemuid.blogspot.com/",
+            "logo": "images/eduroute/partners/C49NJuIKcHy3quU2ahrrILX38LaQpTiVYmiXPnSk.png",
+            "logo_bg_color": null,
+            "order_number": 10,
+            "is_active": true
+        }
+    ]
+}

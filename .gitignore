@@ -1,0 +1,79 @@
+# ---------------------------------------------------------------------------
+# Dependencies
+# ---------------------------------------------------------------------------
+/node_modules
+/vendor
+
+# ---------------------------------------------------------------------------
+# Environment files (NEVER commit real secrets)
+# ---------------------------------------------------------------------------
+.env
+.env.backup
+.env.production
+.env.*.local
+.env.local
+
+# ---------------------------------------------------------------------------
+# Vite / compiled assets
+# NOTE: /public/build is intentionally NOT ignored because the Vercel deploy
+# needs the compiled manifest. Local dev artifacts below must be ignored,
+# especially /public/hot — otherwise production points assets at localhost.
+# ---------------------------------------------------------------------------
+/public/hot
+/public/fonts-manifest.dev.json
+/public/hot-*
+
+# ---------------------------------------------------------------------------
+# Database files (local data, may contain user rows + password hashes)
+# ---------------------------------------------------------------------------
+/database/*.sqlite
+/database/*.sqlite-journal
+/database/*.sqlite-shm
+/database/*.sqlite-wal
+/database/*.db
+/database/*.db-journal
+
+# ---------------------------------------------------------------------------
+# Logs, caches & debug output
+# ---------------------------------------------------------------------------
+*.log
+.phpunit.result.cache
+/.phpunit.cache
+/storage/framework/views/*.php
+/bootstrap/cache/*.php
+npm-debug.log*
+yarn-error.log*
+
+# ---------------------------------------------------------------------------
+# Uploaded / generated media (bloat the repo; keep out of Git)
+# ---------------------------------------------------------------------------
+/public/vidio
+/public/storage
+
+# ---------------------------------------------------------------------------
+# Editors, IDEs & AI tooling
+# ---------------------------------------------------------------------------
+/.codex
+/.cursor
+/.idea
+/.nova
+/.vscode
+/.zed
+/.phpactor.json
+_ide_helper.php
+/.ai/rules/local-*.md
+
+# ---------------------------------------------------------------------------
+# OS files
+# ---------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------------------------------------------------------------------------
+# Misc
+# ---------------------------------------------------------------------------
+Homestead.json
+Homestead.yaml
+/auth.json
+*.bak
