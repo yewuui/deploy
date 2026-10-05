@@ -243,6 +243,40 @@ class ChatbotTest extends TestCase
             ->assertJsonStructure(['error']);
     }
 
+    public function test_chatbot_does_not_escalate_to_a_costlier_model_on_rate_limit(): void
+    {
+        config()->set('services.gemini.fallback_model', 'gemini-2.5-pro');
+
+        Http::fake([
+            'generativelanguage.googleapis.com/*' => Http::response(['error' => ['message' => 'quota']], 429),
+        ]);
+
+        $this->postJson(route('chatbot.ask'), ['message' => 'Halo'])
+            ->assertStatus(503)
+            ->assertJsonStructure(['error']);
+
+        // Rate limit berlaku untuk seluruh kunci API, jadi percobaan kedua
+        // hanya akan menambah kuota terpakai tanpa peluang berhasil yang lebih baik.
+        Http::assertSentCount(1);
+    }
+
+    public function test_chatbot_still_falls_back_once_on_a_transient_provider_failure(): void
+    {
+        config()->set('services.gemini.fallback_model', 'gemini-2.5-pro');
+
+        Http::fake([
+            'generativelanguage.googleapis.com/*' => Http::sequence()
+                ->push(['error' => ['message' => 'unavailable']], 503)
+                ->push(['candidates' => [['content' => ['parts' => [['text' => 'Jawaban cadangan.']]]]]], 200),
+        ]);
+
+        $this->postJson(route('chatbot.ask'), ['message' => 'Halo'])
+            ->assertOk()
+            ->assertJsonStructure(['answer']);
+
+        Http::assertSentCount(2);
+    }
+
     public function test_chatbot_handles_gemini_empty_candidate_response(): void
     {
         Http::fake([

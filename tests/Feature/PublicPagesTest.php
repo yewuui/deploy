@@ -7,6 +7,7 @@ use App\Models\BludUnit;
 use App\Models\Gallery;
 use App\Models\ProgramKeahlian;
 use App\Models\SaranaPrasarana;
+use App\Models\SiteSetting;
 use App\Models\TeachingFactory;
 use Database\Seeders\ArticleSeeder;
 use Database\Seeders\DownloadSeeder;
@@ -74,6 +75,35 @@ class PublicPagesTest extends TestCase
         $this->get(route('home'))
             ->assertOk()
             ->assertSee('Assalamualaikum warahmatullahi wabarakatuh', false);
+    }
+
+    public function test_saving_a_setting_is_visible_to_the_page_rendered_in_the_same_request(): void
+    {
+        $this->seedSite();
+
+        // allCached() menyalin hasil baca selama satu request supaya halaman
+        // tidak query tabel cache puluhan kali. Risikonya: nilai lama ikut
+        // terbawa setelah admin menyimpan. Test ini menjaga agar pembacaan
+        // sesudah penyimpanan selalu melihat nilai baru.
+        $this->assertStringStartsWith(
+            'Assalamualaikum warahmatullahi wabarakatuh',
+            (string) SiteSetting::value('principal.message')
+        );
+
+        SiteSetting::query()
+            ->where('key', 'principal.message')
+            ->firstOrFail()
+            ->update(['value' => 'Bismillahirrahmanirrahim']);
+
+        $this->assertSame(
+            'Bismillahirrahmanirrahim',
+            SiteSetting::value('principal.message')
+        );
+
+        $this->get(route('home'))
+            ->assertOk()
+            ->assertSee('Bismillahirrahmanirrahim', false)
+            ->assertDontSee('Assalamualaikum warahmatullahi wabarakatuh', false);
     }
 
     public function test_home_page_lists_every_competition_organizer_with_a_link_to_their_site(): void

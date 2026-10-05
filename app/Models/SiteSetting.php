@@ -24,12 +24,22 @@ class SiteSetting extends Model
 
     public static function flushCache(): void
     {
-        Cache::forget(self::CACHE_KEY);
+        // `Cache::memo()->forget()` membersihkan dua lapis sekaligus: salinan
+        // request yang berjalan dan entri di store. Menempelkan
+        // `Cache::forget()` saja tidak cukup karena tidak menyentuh salinan,
+        // sehingga request yang sama dengan penyimpanan admin masih bisa
+        // membaca nilai lama.
+        Cache::memo()->forget(self::CACHE_KEY);
     }
 
     public static function allCached(): array
     {
-        return Cache::rememberForever(self::CACHE_KEY, function () {
+        // `Cache::memo()` menyimpan hasil baca di memori selama satu siklus
+        // request, lalu meneruskan ke store yang biasa (database) saat miss.
+        // Setiap halaman memuat puluhan `Site::...()`, tanpa ini setiap
+        // pemanggilan jadi satu query ke tabel cache. Store di bawahnya tetap
+        // `rememberForever`, jadi tidak ada perubahan perilaku antar-request.
+        return Cache::memo()->rememberForever(self::CACHE_KEY, function () {
             return static::query()->pluck('value', 'key')->all();
         });
     }

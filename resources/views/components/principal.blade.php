@@ -6,6 +6,10 @@
 @php
     $principal = \App\Support\Site::principal();
     $principalName = $name ?: $principal['name'];
+    $principalMessage = $slot->isEmpty() ? $principal['message'] : $slot;
+    $principalMessageText = trim(strip_tags((string) $principalMessage));
+    $hasLongPrincipalMessage = mb_strlen($principalMessageText) > 280;
+    $principalMessagePreview = \Illuminate\Support\Str::limit($principalMessageText, 280);
 @endphp
 
 <section {{ $attributes->merge(['class' => 'section']) }}>
@@ -26,8 +30,16 @@
                 </h2>
 
                 <figure class="mt-6 border-l-4 border-brand-accent pl-6">
-                    <blockquote class="text-base leading-relaxed text-slate-600 sm:text-lg">
-                        {{ $slot->isEmpty() ? $principal['message'] : $slot }}
+                    <blockquote x-data="{ expanded: false }" class="text-base leading-relaxed text-slate-600 sm:text-lg">
+                        @if ($hasLongPrincipalMessage)
+                            <p x-show="!expanded">{{ $principalMessagePreview }}</p>
+                            <p x-show="expanded" x-cloak>{{ $principalMessageText }}</p>
+                            <button type="button" class="mt-2 text-sm font-semibold text-brand-sky hover:text-brand-navy" @click="expanded = !expanded">
+                                <span x-text="expanded ? 'Tampilkan lebih sedikit' : 'Baca selengkapnya'">Baca selengkapnya</span>
+                            </button>
+                        @else
+                            <p>{{ $principalMessageText }}</p>
+                        @endif
                     </blockquote>
                     <figcaption class="mt-6">
                         <p class="font-display text-base font-bold text-slate-900">{{ $principalName }}</p>

@@ -125,7 +125,7 @@
                 tabindex="0"
                 role="region"
                 aria-label="Jalur pembelajaran horizontal. Geser untuk melihat tahap berikutnya."
-                class="overflow-x-auto pb-4 cursor-grab min-w-0"
+                class="w-full min-w-0 overflow-x-auto overscroll-x-contain pb-4 cursor-grab"
             >
                 <div id="roadmap-canvas" class="grid w-max grid-flow-col gap-0 pt-12"
                     style="grid-template-rows: minmax(220px, 1fr) auto minmax(220px, 1fr); grid-template-columns: repeat({{ max($stages->count(), 1) }}, 15rem);">

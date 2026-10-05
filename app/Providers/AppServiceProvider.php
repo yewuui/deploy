@@ -38,6 +38,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->shareEduroutePrograms();
+        $this->sharePublishedProgramKeahlian();
 
         foreach ($this->chatbotKnowledgeModels() as $model) {
             $model::saved(fn () => app(SchoolKnowledgeBase::class)->flush());
@@ -64,6 +65,33 @@ class AppServiceProvider extends ServiceProvider
                 ->orderByRaw('COALESCE(program_keahlians.title, programs.name) ASC')
                 ->select('programs.*')
                 ->get());
+        });
+    }
+
+    /**
+     * Daftar program keahlian terbit untuk navbar, footer, dan penghitung di
+     * beranda.
+     *
+     * Ketiganya butuh query `program_keahlians` yang identik, sebelumnya
+     * dijalankan tiga kali pada halaman beranda dan dua kali di setiap halaman
+     * publik lainnya. Hasilnya dipusatkan di sini dan hanya diambil sekali per
+     * request: closure di bawah dibuat ulang setiap kali aplikasi di-booting,
+     * jadi tidak ada state yang bisa bocor ke request berikutnya.
+     */
+    private function sharePublishedProgramKeahlian(): void
+    {
+        $programs = null;
+
+        $resolve = function () use (&$programs) {
+            return $programs ??= ProgramKeahlian::query()
+                ->published()
+                ->with('edurouteProgram')
+                ->ordered()
+                ->get();
+        };
+
+        View::composer(['layouts.app', 'home'], function ($view) use ($resolve): void {
+            $view->with('publishedProgramKeahlian', $resolve());
         });
     }
 

@@ -21,6 +21,11 @@ class ChatbotException extends RuntimeException
         return new self("Layanan chatbot gagal merespons (HTTP {$status}).");
     }
 
+    public static function rateLimited(): self
+    {
+        return new self('Layanan chatbot sedang sibuk. Silakan coba lagi sebentar lagi.');
+    }
+
     public static function emptyResponse(): self
     {
         return new self('Layanan chatbot tidak mengembalikan jawaban.');

@@ -1,7 +1,5 @@
 @php
     use App\Support\Site;
-
-    $programs = \App\Models\ProgramKeahlian::published()->ordered()->get();
 @endphp
 
 <footer class="bg-slate-950 text-slate-300">

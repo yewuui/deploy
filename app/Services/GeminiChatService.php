@@ -11,6 +11,27 @@ use Illuminate\Support\Facades\Log;
 
 class GeminiChatService
 {
+    /**
+     * Batas waktu satu percobaan ke provider.
+     *
+     * Nilai lama 30 detik terlalu longgar untuk konteks web: satu request bisa
+     * spend 30 detik di model utama lalu 30 detik lagi di model cadangan, dan
+     * keduanya masih berjalan bersamaan dengan antrean worker PHP-FPM. Di
+     * bawah ini, satu request chatbot consumes satu worker paling lama ~10
+     * detik sehingga antrean tidak menumpuk saat trafik naik.
+     */
+    private const TIMEOUT_SECONDS = 10;
+
+    private const CONNECT_TIMEOUT_SECONDS = 4;
+
+    /**
+     * Batas jumlah percobaan ke provider dalam satu request.
+     *
+     * Dibatasi eksplisit supaya tidak ada jalur retry tanpa batas: model utama
+     * dicoba sekali, lalu paling banyak satu model cadangan.
+     */
+    private const MAX_ATTEMPTS = 2;
+
     /** @var list<array{role: string, content: string}> */
     private array $history = [];
 
@@ -55,10 +76,10 @@ class GeminiChatService
             ],
         ];
 
-        $models = array_values(array_filter(array_unique([
+        $models = array_slice(array_values(array_filter(array_unique([
             config('services.gemini.model'),
             config('services.gemini.fallback_model'),
-        ])));
+        ]))), 0, self::MAX_ATTEMPTS);
 
         $lastResponse = null;
 
@@ -80,6 +101,15 @@ class GeminiChatService
                 'status' => $response->status(),
                 'body' => $response->json('error.message'),
             ]);
+
+            // 429 berarti kuota atau rate limit provider, bukan gangguan
+            // sesaat. Model cadangan (_flash) lebih mahal dan akan kena
+            // limit yang sama, jadi langsung berhenti: fallback di sini
+            // hanya memperpanjang waktu tunggu pengguna tanpa menambah
+            // peluang berhasil.
+            if ($response->status() === 429) {
+                throw ChatbotException::rateLimited();
+            }
 
             $lastResponse = $response;
 
@@ -103,8 +133,8 @@ class GeminiChatService
         );
 
         try {
-            return Http::timeout(30)
-                ->connectTimeout(10)
+            return Http::timeout(self::TIMEOUT_SECONDS)
+                ->connectTimeout(self::CONNECT_TIMEOUT_SECONDS)
                 ->withHeaders(['x-goog-api-key' => config('services.gemini.key')])
                 ->acceptJson()
                 ->post($endpoint, $payload);
@@ -115,9 +145,16 @@ class GeminiChatService
         }
     }
 
+    /**
+     * Kegagalan yang layak dicoba lagi ke model berikutnya.
+     *
+     * 503 Provider Unavailable bersifat sesaat dan model cadangan tidak menambah
+     * biaya, jadi masih aman dicoba. 429 sengaja tidak ada di sini: batas
+     * kuota berlaku untuk seluruh kunci API, bukan per model.
+     */
     private function isTransientFailure(int $status): bool
     {
-        return in_array($status, [429, 503], true);
+        return $status === 503;
     }
 
     /**

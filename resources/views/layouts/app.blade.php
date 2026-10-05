@@ -19,6 +19,8 @@
             :noindex="$seoNoindex ?? false"
             :json-ld="$seoJsonLd ?? []" />
 
+            <meta name="google-site-verification" content="Bk6NgdY8FT-UjZrubW66NIfdd6OtGuKvVYkz5q_02-U">
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <script>
@@ -36,13 +38,13 @@
         Lewati ke konten utama
     </a>
 
-    <x-navbar />
+    <x-navbar :programs="$publishedProgramKeahlian" />
 
     <main id="konten-utama" class="flex-1">
         @yield('content')
     </main>
 
-    <x-footer />
+    <x-footer :programs="$publishedProgramKeahlian" />
 
     <x-chatbot />
 

@@ -47,7 +47,7 @@
                         </div>
                         <div>
                             <dt class="text-xs font-medium text-slate-500">Program Keahlian</dt>
-                            <dd class="mt-1 font-display text-xl font-bold text-slate-900">{{ $programs->count() }}</dd>
+                            <dd class="mt-1 font-display text-xl font-bold text-slate-900">{{ $publishedProgramKeahlian->count() }}</dd>
                         </div>
                     </dl>
                 </div>

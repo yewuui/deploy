@@ -2,6 +2,10 @@
     use App\Models\ProgramKeahlian;
     use App\Support\Site;
 
+    // Dipasang oleh AppServiceProvider lewat view composer supaya navbar dan
+    // footer memakai satu query yang sama per halaman.
+    $programs = $programs ?? [];
+
     // "activeOn" mendaftarkan nama route lain yang harus tetap menyalakan
     // menu terkait, misalnya halaman detail berita atau sarana prasarana.
     $nav = [
@@ -27,10 +31,7 @@
 [
             'label' => 'Program Keahlian',
             'activeOn' => ['program-keahlian.index', 'program-keahlian.show'],
-            'children' => ProgramKeahlian::published()
-                ->with('edurouteProgram')
-                ->ordered()
-                ->get()
+            'children' => $programs
                 ->map(fn ($p) => $p->edurouteProgram?->is_active
                     ? [
                         'label' => $p->title,
