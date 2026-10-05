@@ -25,7 +25,6 @@
     data-stage-description="{{ $description ?? '' }}"
     data-stage-topics="{{ json_encode($topicList, JSON_UNESCAPED_UNICODE) }}"
     data-stage-type-label="{{ $typeLabel ?? '' }}"
-    data-stage-image=""
     data-stage-bar="{{ $bar }}"
     aria-haspopup="dialog"
     aria-label="Tahap {{ $stageLabel }}: {{ $title }}. {{ $typeLabel ? $typeLabel . '. ' : '' }}Lihat rincian."

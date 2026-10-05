@@ -410,7 +410,6 @@
         const modalType = document.getElementById('stage-modal-type');
         const title = document.getElementById('stage-modal-title');
         const description = document.getElementById('stage-modal-description');
-        const modalImage = document.getElementById('stage-modal-image');
         const topicsLabel = document.getElementById('stage-modal-topics-label');
         const topicsList = document.getElementById('stage-modal-topics');
         const closeButton = modal.querySelector('[data-stage-close]');
@@ -462,7 +461,6 @@
             const stageTitle = trigger.getAttribute('data-stage-title') || '';
             const stageDescription = trigger.getAttribute('data-stage-description') || '';
             const stageTypeLabel = trigger.getAttribute('data-stage-type-label') || '';
-            const stageImage = '';
 
             let topics = [];
             try {
@@ -488,10 +486,6 @@
             modalType.classList.toggle('hidden', !stageTypeLabel);
             title.textContent = stageTitle;
             topicsLabel.textContent = stageTypeLabel ? 'Cakupan kegiatan' : 'Yang dipelajari';
-
-            modalImage.classList.add('hidden');
-            modalImage.removeAttribute('src');
-            modalImage.alt = '';
 
             if (stageDescription) {
                 description.textContent = stageDescription;
