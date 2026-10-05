@@ -73,8 +73,39 @@ Alpine.data('navDropdown', () => ({
     },
 }));
 
+/**
+ * Chatbot display preferences, persisted per browser so the widget stays
+ * out of the way (compact or hidden) across page loads.
+ */
+const chatbotPreferences = {
+    read(key) {
+        try {
+            return window.localStorage.getItem(`eduroute.chatbot.${key}`) === '1';
+        } catch {
+            return false;
+        }
+    },
+
+    write(key, enabled) {
+        try {
+            const storageKey = `eduroute.chatbot.${key}`;
+
+            if (enabled) {
+                window.localStorage.setItem(storageKey, '1');
+            } else {
+                window.localStorage.removeItem(storageKey);
+            }
+        } catch {
+            // Storage unavailable (private mode): keep the in-memory state only.
+        }
+    },
+};
+
 Alpine.data('chatbot', (config = {}) => ({
     open: false,
+    compact: false,
+    hidden: false,
+    teaserDismissed: false,
     loading: false,
     hovered: false,
     input: '',
@@ -89,10 +120,27 @@ Alpine.data('chatbot', (config = {}) => ({
 
     init() {
         this.messages = [this.createMessage('assistant', this.greeting)];
+        this.compact = chatbotPreferences.read('compact');
+        this.hidden = chatbotPreferences.read('hidden');
+        this.teaserDismissed = chatbotPreferences.read('teaser-dismissed');
     },
 
     get showSuggestions() {
         return ! this.loading && this.suggestions.length > 0 && this.messages.length <= 1;
+    },
+
+    get showLauncher() {
+        return ! this.hidden;
+    },
+
+    get showTeaser() {
+        return ! this.open && ! this.hidden && ! this.compact && ! this.teaserDismissed;
+    },
+
+    get launcherSizeClasses() {
+        return this.compact
+            ? 'h-12 w-12 justify-center p-0'
+            : 'min-h-14 gap-3 py-2.5 pl-3 pr-6';
     },
 
     get history() {
@@ -124,6 +172,52 @@ Alpine.data('chatbot', (config = {}) => ({
     close() {
         this.open = false;
         this.$nextTick(() => this.$refs.chatToggle?.focus());
+    },
+
+    /** Collapse the panel into a small circular launcher button. */
+    minimize() {
+        this.open = false;
+        this.compact = true;
+        this.hidden = false;
+        chatbotPreferences.write('compact', true);
+        chatbotPreferences.write('hidden', false);
+        this.$nextTick(() => this.$refs.chatToggle?.focus());
+    },
+
+    /** Collapse the panel into a small circular launcher button, or undo it. */
+    toggleCompact() {
+        if (this.compact) {
+            this.expand();
+        } else {
+            this.minimize();
+        }
+    },
+
+    /** Restore the full launcher pill from compact mode. */
+    expand() {
+        this.compact = false;
+        chatbotPreferences.write('compact', false);
+    },
+
+    /** Hide the whole widget, leaving a small restore handle. */
+    hide() {
+        this.open = false;
+        this.compact = false;
+        this.hidden = true;
+        chatbotPreferences.write('compact', false);
+        chatbotPreferences.write('hidden', true);
+    },
+
+    /** Bring the widget back from the hidden state. */
+    restore() {
+        this.hidden = false;
+        chatbotPreferences.write('hidden', false);
+    },
+
+    /** Permanently hide the greeting teaser bubble. */
+    dismissTeaser() {
+        this.teaserDismissed = true;
+        chatbotPreferences.write('teaser-dismissed', true);
     },
 
     reset() {

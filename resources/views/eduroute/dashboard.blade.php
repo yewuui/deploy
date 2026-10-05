@@ -83,17 +83,14 @@
                 <h3 id="rpl-grades-title" class="text-h2 font-semibold text-ink dark:text-night-ink">Kurikulum per kelas</h3>
                 <span class="mt-2 block h-0.5 w-full min-w-[4rem] rounded-pill bg-royal dark:bg-night-royal" aria-hidden="true"></span>
             </div>
-            <p class="mt-3 max-w-3xl text-small text-muted dark:text-night-muted">Materi tiap kelas disusun per semester. Pilih kelas untuk melihat alur pembelajarannya.</p>
+            <p class="mt-3 max-w-3xl text-small text-muted dark:text-night-muted">Pilih kelas untuk melihat alur pembelajarannya.</p>
         </div>
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
             @foreach ([10, 11, 12] as $grade)
                 <a href="{{ route('eduroute.roadmap', ['program' => $program, 'grade' => $grade]) }}" data-reveal="up" data-reveal-delay="{{ min(($loop->index + 1) * 100, 300) }}" class="group hover-lift flex min-h-[44px] items-center justify-between gap-3 rounded-card border border-hairline bg-paper px-5 py-4 shadow-soft hover:border-royal/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-royal focus-visible:ring-offset-2 dark:border-night-hairline dark:bg-night-surface dark:hover:border-night-royal/50 dark:focus-visible:ring-offset-night-canvas">
                     <span class="flex items-center gap-3.5">
                         <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-item text-body font-bold tabular-nums {{ $grade === 12 ? 'bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-200' : 'bg-royal-soft text-royal-strong dark:bg-night-royal-soft dark:text-night-royal' }}" aria-hidden="true">{{ $grade }}</span>
-                        <span>
-                            <span class="block text-small font-semibold text-ink dark:text-night-ink">Kelas {{ $grade }}</span>
-                            <span class="mt-0.5 block text-micro text-muted dark:text-night-muted">{{ $grade === 12 ? 'Program & kegiatan' : 'Semester 1&ndash;2' }}</span>
-                        </span>
+                        <span class="block text-small font-semibold text-ink dark:text-night-ink">Kelas {{ $grade }}</span>
                     </span>
                     <svg class="h-4 w-4 shrink-0 text-royal-strong transition-transform duration-200 group-hover:translate-x-0.5 dark:text-night-royal" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
                 </a>

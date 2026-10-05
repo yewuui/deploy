@@ -114,6 +114,21 @@
         class="fixed bottom-4 right-4 z-90 print:hidden"
         @keydown.escape.window="if (open) close()"
     >
+        {{-- Restore handle (shown when the widget is hidden) --}}
+        <div x-show="hidden" x-cloak class="flex justify-end">
+            <button
+                type="button"
+                @click="restore()"
+                class="flex h-9 w-9 items-center justify-center rounded-full bg-white/70 text-slate-500 ring-1 ring-slate-300 backdrop-blur transition hover:bg-white hover:text-brand-navy hover:ring-slate-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-sky"
+                aria-label="Tampilkan Skansaba AI"
+                title="Tampilkan Skansaba AI"
+            >
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8">
+                    <path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.9 8.9 0 0 1-3.8-.9L3 21l1.9-4.9A8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5Z" />
+                </svg>
+            </button>
+        </div>
+
         {{-- Chat panel --}}
         <div
             x-show="open"
@@ -156,6 +171,33 @@
                         >
                             <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h5M20 20v-5h-5M20 9A8 8 0 0 0 6.3 5.3M4 15a8 8 0 0 0 13.7 3.7" />
+                            </svg>
+                        </button>
+
+                        <button
+                            type="button"
+                            @click="toggleCompact()"
+                            class="rounded-full p-2 text-white/80 transition-colors hover:bg-white/15 hover:text-white"
+                            :aria-label="compact ? 'Perbesar tombol Skansaba AI' : 'Perkecil jadi ikon kecil'"
+                            :title="compact ? 'Perbesar tombol Skansaba AI' : 'Perkecil jadi ikon kecil'"
+                        >
+                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14" />
+                            </svg>
+                        </button>
+
+                        <button
+                            type="button"
+                            @click="hide()"
+                            class="rounded-full p-2 text-white/80 transition-colors hover:bg-white/15 hover:text-white"
+                            aria-label="Sembunyikan Skansaba AI"
+                            title="Sembunyikan Skansaba AI"
+                        >
+                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                <path d="M3 3l18 18" />
+                                <path d="M10.6 10.6a2 2 0 0 0 2.8 2.8" />
+                                <path d="M9.4 5.3A9.3 9.3 0 0 1 12 5c5 0 9 4.6 9 7a11.8 11.8 0 0 1-2.4 3.4" />
+                                <path d="M6.6 6.7A11.6 11.6 0 0 0 3 12c0 2.4 4 7 9 7a9.5 9.5 0 0 0 4-.9" />
                             </svg>
                         </button>
 
@@ -288,21 +330,47 @@
         </div>
 
         {{-- Launcher --}}
-        <div class="relative flex justify-end">
-            {{-- Greeting teaser --}}
+        <div x-show="showLauncher" x-cloak class="relative flex items-center justify-end gap-2">
+            {{-- Greeting teaser: stays available but can be dismissed --}}
             <div
-                x-show="!open"
+                x-show="showTeaser"
                 x-cloak
                 x-transition:enter="transition ease-out duration-400 delay-200"
                 x-transition:enter-start="opacity-0 translate-x-4"
                 x-transition:enter-end="opacity-100 translate-x-0"
-                class="pointer-events-none absolute bottom-3 right-full mr-3 hidden w-60 rounded-2xl border border-slate-200 bg-white p-3.5 text-sm shadow-panel sm:block"
-                aria-hidden="true"
+                class="pointer-events-none absolute bottom-3 right-full mr-3 hidden w-60 rounded-2xl border border-slate-200 bg-white p-3.5 pr-9 text-sm shadow-panel sm:block"
             >
                 <p class="font-display text-xs font-bold text-brand-navy">Butuh informasi?</p>
                 <p class="mt-1 leading-snug text-slate-600">Tanya Skansaba AI soal jurusan, PPDB, atau fasilitas sekolah.</p>
                 <span class="absolute -right-1.5 bottom-4 h-3 w-3 rotate-45 border-r border-t border-slate-200 bg-white"></span>
+
+                <button
+                    type="button"
+                    @click="dismissTeaser()"
+                    class="pointer-events-auto absolute right-1.5 top-1.5 rounded-full p-1 text-slate-400 transition hover:bg-slate-100 hover:text-slate-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-sky"
+                    aria-label="Sembunyikan pesan ini"
+                    title="Sembunyikan pesan ini"
+                >
+                    <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 6l12 12M18 6 6 18" />
+                    </svg>
+                </button>
             </div>
+
+            {{-- Expand back from compact mode --}}
+            <button
+                type="button"
+                x-show="compact"
+                x-cloak
+                @click="expand()"
+                class="hidden h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/70 text-slate-500 ring-1 ring-slate-300 backdrop-blur transition hover:bg-white hover:text-brand-navy hover:ring-slate-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-sky sm:flex"
+                aria-label="Perluas tombol Skansaba AI"
+                title="Perluas tombol Skansaba AI"
+            >
+                <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    <path d="M9 7H5V3M15 7h4V3M9 17H5v4M15 17h4v4" />
+                </svg>
+            </button>
 
             <button
                 type="button"
@@ -312,9 +380,10 @@
                 @mouseleave="hovered = false"
                 @focus="hovered = true"
                 @blur="hovered = false"
-                class="chatbot-launcher chatbot-glow flex min-h-14 items-center gap-3 rounded-full py-2.5 pl-3 pr-6 text-sm font-semibold text-white shadow-[0_14px_34px_-10px_rgba(10,60,134,0.8)]"
-                :class="hovered && !open && 'chatbot-launcher-hover'"
+                class="chatbot-launcher chatbot-glow flex items-center rounded-full text-sm font-semibold text-white shadow-[0_14px_34px_-10px_rgba(10,60,134,0.8)]"
+                :class="[launcherSizeClasses, hovered && !open && 'chatbot-launcher-hover']"
                 :aria-expanded="open ? 'true' : 'false'"
+                :aria-label="open ? 'Tutup chat' : (compact ? 'Perbuka Skansaba AI' : 'Tanya Skansaba AI')"
                 aria-controls="chatbot-panel"
             >
                 <span class="relative flex h-9 w-9 items-center justify-center rounded-full bg-white/15 ring-1 ring-white/25">
@@ -330,9 +399,9 @@
                     </svg>
                 </span>
 
-                <span class="hidden sm:inline" x-text="open ? 'Tutup' : 'Tanya Skansaba AI'">Tanya Skansaba AI</span>
+                <span x-show="!compact" class="hidden sm:inline" x-text="open ? 'Tutup' : 'Tanya Skansaba AI'">Tanya Skansaba AI</span>
 
-                <svg x-show="!open" class="hidden h-4 w-4 sm:block" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <svg x-show="!compact && !open" class="hidden h-4 w-4 sm:block" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m0 0-6-6m6 6-6 6" />
                 </svg>
             </button>

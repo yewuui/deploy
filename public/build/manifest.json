@@ -28,7 +28,7 @@
     "src": "_instrument-sans-600-normal-B9e8oLYv.woff"
   },
   "resources/css/app.css": {
-    "file": "assets/app-CjLy99h7.css",
+    "file": "assets/app-XmFkVozQ.css",
     "name": "app",
     "names": [
       "app.css"
@@ -59,7 +59,7 @@
     "src": "resources/fonts/Metropolis/Metropolis-SemiBold.otf"
   },
   "resources/js/app.js": {
-    "file": "assets/app-DGgfYSWk.js",
+    "file": "assets/app-BfdLFXzL.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true
