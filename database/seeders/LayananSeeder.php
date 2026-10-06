@@ -30,6 +30,7 @@ class LayananSeeder extends Seeder
             BludUnit::updateOrCreate(
                 ['name' => $item['name']],
                 [
+                    'image' => isset($item['image']) ? ltrim($item['image'], '/') : null,
                     'is_published' => true,
                     'sort_order' => $index + 1,
                 ]

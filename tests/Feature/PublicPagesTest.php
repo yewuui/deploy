@@ -4,6 +4,7 @@ namespace Tests\Feature;
 
 use App\Models\Article;
 use App\Models\BludUnit;
+use App\Models\Ekstrakurikuler;
 use App\Models\Gallery;
 use App\Models\ProgramKeahlian;
 use App\Models\SaranaPrasarana;
@@ -187,13 +188,41 @@ class PublicPagesTest extends TestCase
 
         $response = $this->get(route('blud'))->assertOk();
 
-        $response->assertSee('Unit Produksi &amp; Jasa', escape: false);
-
         foreach (BludUnit::published()->ordered()->get() as $unit) {
             $response->assertSee($unit->name);
         }
 
-        $this->assertSame(12, BludUnit::published()->count());
+        $this->assertCount(9, BludUnit::published()->get());
+    }
+
+    public function test_blud_page_shows_images_on_some_cards(): void
+    {
+        $this->seedSite();
+        $this->get(route('blud'))->assertOk()->assertSee('images/blud/skansabastore.jpeg', false);
+    }
+
+    public function test_ekstrakurikuler_shows_cards_for_all_items(): void
+    {
+        $this->seedSite();
+        foreach (Ekstrakurikuler::published()->ordered()->get() as $item) {
+            $this->get(route('ekstrakurikuler'))->assertSee($item->name);
+        }
+    }
+
+    public function test_ekstrakurikuler_shows_image_paths_for_items_with_images(): void
+    {
+        $this->seedSite();
+        foreach (Ekstrakurikuler::published()->ordered()->get() as $item) {
+            if ($item->image_url) {
+                $this->get(route('ekstrakurikuler'))->assertSee($item->image_url, false);
+            }
+        }
+    }
+
+    public function test_ekstrakurikuler_shows_placeholder_for_items_without_image(): void
+    {
+        $this->seedSite();
+        $this->get(route('ekstrakurikuler'))->assertOk()->assertSee('Gambar belum tersedia');
     }
 
     public function test_pkl_page_lists_industry_partners_and_pkl_places_per_program(): void

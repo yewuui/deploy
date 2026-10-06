@@ -46,7 +46,7 @@
                 top: 4.5rem;
                 bottom: 0;
                 left: 0;
-                height: calc(100vh - 4.5rem) !important;
+                height: auto !important;
                 margin-left: 0;
                 transform: translateX(-100%);
                 opacity: 0;
@@ -125,20 +125,23 @@
 
 <body class="bg-surface dark:bg-night-canvas text-ink dark:text-night-ink antialiased min-h-screen flex flex-col transition-colors duration-200">
 
-    <nav class="bg-paper dark:bg-night-surface border-b border-hairline dark:border-night-hairline px-4 sm:px-8 py-3.5 flex justify-between items-center gap-3 sticky top-0 z-50 transition-colors duration-200">
-        <div class="flex items-center gap-3 min-w-0">
-            <button id="sidebar-toggle" type="button" aria-controls="sidebar" aria-expanded="false" aria-label="Buka atau tutup sidebar" class="h-11 w-11 shrink-0 rounded-item bg-surface dark:bg-night-raised text-muted hover:text-royal-strong dark:text-night-muted dark:hover:text-night-royal border border-hairline dark:border-night-hairline transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-royal dark:focus-visible:ring-night-royal focus-visible:ring-offset-2 dark:focus-visible:ring-offset-night-surface flex items-center justify-center">
+    <nav class="bg-paper dark:bg-night-surface border-b border-hairline dark:border-night-hairline px-3 sm:px-8 py-3.5 flex justify-between items-center gap-2 sm:gap-3 sticky top-0 z-50 transition-colors duration-200">
+        <div class="flex min-w-0 items-center gap-2 sm:gap-3">
+            <button id="sidebar-toggle" type="button" aria-controls="sidebar" aria-expanded="false" aria-label="Buka navigasi jurusan" class="h-11 w-11 shrink-0 rounded-item bg-surface dark:bg-night-raised text-muted hover:text-royal-strong dark:text-night-muted dark:hover:text-night-royal border border-hairline dark:border-night-hairline transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-royal dark:focus-visible:ring-night-royal focus-visible:ring-offset-2 dark:focus-visible:ring-offset-night-surface flex items-center justify-center">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
 
-            <img id="program-identity-logo" src="{{ $layoutProgram?->logo_url ?? asset('images/eduroute/logo/logo SMK.png') }}" alt="Logo {{ $layoutProgram->short_name ?? 'SMKN 1 Bantul' }}" class="h-10 w-auto shrink-0 object-contain">
+            <img id="program-identity-logo" src="{{ $layoutProgram?->logo_url ?? asset('images/eduroute/logo/logo SMK.png') }}" alt="Logo {{ $layoutProgram->short_name ?? 'SMKN 1 Bantul' }}" class="h-9 w-auto shrink-0 object-contain sm:h-10">
             <div class="min-w-0">
-                <p class="text-[11px] font-medium text-muted dark:text-night-muted leading-tight">SMKN 1 Bantul</p>
-                <h1 id="program-identity-name" class="text-small font-semibold text-ink dark:text-night-ink leading-tight truncate">{{ $layoutProgram->name ?? 'Rekayasa Perangkat Lunak' }}</h1>
+                <p class="hidden text-[11px] font-medium leading-tight text-muted dark:text-night-muted sm:block">SMKN 1 Bantul</p>
+                <h1 id="program-identity-name" class="text-small font-semibold text-ink dark:text-night-ink leading-tight truncate">
+                    <span class="sm:hidden">{{ $layoutProgram->short_name ?? 'RPL' }}</span>
+                    <span class="hidden sm:inline">{{ $layoutProgram->name ?? 'Rekayasa Perangkat Lunak' }}</span>
+                </h1>
             </div>
         </div>
 
-        <div class="flex items-center gap-2 shrink-0">
+        <div class="flex shrink-0 items-center gap-1 sm:gap-2">
             <x-eduroute-program-switcher :program="$layoutProgram" :programs="$eduroutePrograms ?? null" />
 
             <button id="theme-toggle" type="button" aria-label="Ganti tema terang atau gelap" class="h-11 w-11 rounded-item text-muted hover:text-ink hover:bg-surface dark:text-night-muted dark:hover:text-night-ink dark:hover:bg-night-raised transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-royal dark:focus-visible:ring-night-royal focus-visible:ring-offset-2 dark:focus-visible:ring-offset-night-surface flex items-center justify-center">
@@ -150,7 +153,7 @@
 
     <div class="flex flex-1 min-h-[calc(100vh-4.5rem)]">
 
-        <aside id="sidebar" aria-label="Navigasi program keahlian" class="w-72 shrink-0 bg-paper dark:bg-night-surface border-r border-hairline dark:border-night-hairline p-4 flex flex-col justify-between sticky top-[4.5rem] h-[calc(100vh-4.5rem)] overflow-y-auto z-40">
+        <aside id="sidebar" aria-label="Navigasi program keahlian" class="w-[min(18rem,calc(100vw-3rem))] shrink-0 bg-paper dark:bg-night-surface border-r border-hairline dark:border-night-hairline p-4 flex flex-col justify-between sticky top-[4.5rem] h-[calc(100vh-4.5rem)] overflow-y-auto z-40 lg:w-72">
             <div>
                 <p class="text-micro font-semibold uppercase tracking-wider text-muted dark:text-night-muted mb-2 px-3">Navigasi jurusan</p>
                 <nav class="flex flex-col gap-1 mb-6" aria-label="Navigasi utama">
@@ -219,7 +222,7 @@
 
         <button id="sidebar-backdrop" type="button" tabindex="-1" aria-hidden="true" aria-label="Tutup sidebar" class="hidden fixed inset-0 bg-night-canvas/60 z-30 lg:hidden"></button>
 
-        <main class="min-w-0 flex-1 p-4 sm:p-6 lg:p-8 bg-surface dark:bg-night-canvas transition-colors duration-200 w-full">
+        <main class="min-w-0 w-full flex-1 bg-surface p-4 transition-colors duration-200 dark:bg-night-canvas sm:p-6 lg:p-8">
             @yield('content')
         </main>
     </div>
@@ -229,7 +232,7 @@
             <div class="flex flex-col items-center justify-center gap-2 text-center">
                 
                 <p class="text-[12px] text-muted dark:text-night-muted">
-                    Copyright © {{ date('Y') }} 404 not found • Sekolah Menengah Kejuruan Negeri 1 Bantul
+                    Copyright©{{ date('Y') }} 404 Not Found • SMK Negeri 1 Bantul <br> Alright Reserved
                 </p>
             </div>
         </div>
@@ -260,6 +263,7 @@
 
         const setSidebarExpandedState = function(isExpanded) {
             sidebarToggleBtn.setAttribute('aria-expanded', String(isExpanded));
+            sidebarToggleBtn.setAttribute('aria-label', isExpanded ? 'Tutup navigasi jurusan' : 'Buka navigasi jurusan');
             sidebar.setAttribute('aria-hidden', String(!isExpanded));
             sidebar.inert = !isExpanded;
         };
@@ -267,6 +271,7 @@
         const closeMobileSidebar = function() {
             sidebar.classList.remove('is-sidebar-open');
             sidebarBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
             setSidebarExpandedState(false);
         };
 
@@ -291,6 +296,7 @@
 
             const isOpen = sidebar.classList.toggle('is-sidebar-open');
             sidebarBackdrop.classList.toggle('hidden', !isOpen);
+            document.body.classList.toggle('overflow-hidden', isOpen);
             setSidebarExpandedState(isOpen);
         });
 

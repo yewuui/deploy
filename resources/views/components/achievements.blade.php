@@ -55,9 +55,22 @@
                 </div>
             </div>
 
-            <div class="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:hidden">
+            @if ($items->count() > 1)
+                <p class="mb-3 mt-8 flex items-center justify-end gap-1.5 text-xs font-medium text-slate-500 sm:hidden">
+                    Geser untuk melihat prestasi
+                    <span aria-hidden="true">&rarr;</span>
+                </p>
+            @endif
+
+            <div @class([
+                '-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain px-4 pb-3 sm:mx-0 sm:mt-10 sm:grid sm:grid-cols-2 sm:gap-5 sm:overflow-visible sm:px-0 sm:pb-0 lg:hidden',
+                'mt-3' => $items->count() > 1,
+                'mt-8' => $items->count() <= 1,
+            ]) role="list" aria-label="Daftar prestasi">
                 @foreach ($items->take(4) as $item)
-                    <x-prestasi-card :item="$item" data-reveal="up" data-reveal-delay="{{ $loop->index * 100 }}" />
+                    <div class="min-w-[84%] snap-center sm:min-w-0" role="listitem">
+                        <x-prestasi-card :item="$item" data-reveal="up" data-reveal-delay="{{ $loop->index * 100 }}" />
+                    </div>
                 @endforeach
             </div>
         </div>

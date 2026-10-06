@@ -26,14 +26,14 @@
     <a href="{{ $href }}"
        @if ($target) target="{{ $target }}" rel="noopener noreferrer" @endif
        {{ $attributes->merge([
-           'class' => 'inline-flex w-fit items-center justify-center gap-2 rounded-lg font-semibold transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 '.($variants[$variant] ?? $variants['primary']).' '.($sizes[$size] ?? $sizes['md']),
+           'class' => 'inline-flex min-h-11 w-fit items-center justify-center gap-2 rounded-lg font-semibold transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:min-h-0 '.($variants[$variant] ?? $variants['primary']).' '.($sizes[$size] ?? $sizes['md']),
        ]) }}>
         {{ $slot }}
     </a>
 @else
     <button type="{{ $type }}"
             {{ $attributes->merge([
-                'class' => 'inline-flex w-fit items-center justify-center gap-2 rounded-lg font-semibold transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 disabled:pointer-events-none disabled:opacity-50 '.($variants[$variant] ?? $variants['primary']).' '.($sizes[$size] ?? $sizes['md']),
+                'class' => 'inline-flex min-h-11 w-fit items-center justify-center gap-2 rounded-lg font-semibold transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 disabled:pointer-events-none disabled:opacity-50 sm:min-h-0 '.($variants[$variant] ?? $variants['primary']).' '.($sizes[$size] ?? $sizes['md']),
             ]) }}>
         {{ $slot }}
     </button>

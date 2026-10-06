@@ -4,9 +4,9 @@
     <a href="{{ route('berita.show', $article) }}" class="relative block shrink-0 overflow-hidden bg-slate-100 sm:w-2/5">
         @if ($article->image_url)
             <img src="{{ $article->image_url }}" alt="{{ $article->title }}" loading="lazy"
-                 class="h-48 w-full object-cover transition-transform duration-700 group-hover:scale-[1.04] sm:h-full">
+                 class="h-40 w-full object-cover transition-transform duration-700 group-hover:scale-[1.04] sm:h-full">
         @else
-            <div class="flex h-48 w-full items-center justify-center text-sm text-slate-400 sm:h-full">Gambar tidak tersedia</div>
+            <div class="flex h-40 w-full items-center justify-center text-sm text-slate-400 sm:h-full">Gambar tidak tersedia</div>
         @endif
     </a>
 

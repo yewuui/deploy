@@ -217,12 +217,12 @@
   }
 
   .section {
-    padding-block: 4rem;
+    padding-block: 2.5rem;
   }
 
   @media (min-width: 640px) {
     .section {
-      padding-block: 5rem;
+      padding-block: 4rem;
     }
   }
 
@@ -420,6 +420,32 @@ html.reveal-ready [data-reveal].is-revealed {
   transform: none;
 }
 
+@keyframes curriculum-grade-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgb(var(--grade-pulse-color) / 0%);
+    transform: scale(1);
+  }
+
+  45% {
+    box-shadow: 0 0 0 6px rgb(var(--grade-pulse-color) / 30%);
+    transform: scale(1.14);
+  }
+}
+
+@media (max-width: 639px) {
+  .curriculum-grade-number {
+    animation: curriculum-grade-pulse 1.8s ease-in-out var(--grade-pulse-delay, 0ms) infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .curriculum-grade-number {
+    animation: none !important;
+    transform: none;
+  }
+}
+
 [data-reveal-delay='100'] {
   transition-delay: 100ms;
 }
@@ -611,4 +637,3 @@ html.reveal-ready [data-reveal].is-revealed {
     animation: none;
   }
 }
-

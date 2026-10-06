@@ -202,16 +202,8 @@
             </div>
 
             <div class="flex items-center gap-2 lg:hidden">
-                <a href="{{ route('ppdb') }}"
-                   @class([
-                       'hidden rounded-lg px-4 py-2 text-sm font-semibold text-white transition-colors sm:inline-flex',
-                       'ring-2 ring-brand-sky ring-offset-2' => $current === 'ppdb',
-                       'bg-brand-sky hover:bg-brand-navy' => $current !== 'ppdb',
-                   ])>
-                    Daftar PPDB
-                </a>
-                <button type="button" class="rounded-lg p-2 text-slate-600 transition-colors hover:bg-slate-100 hover:text-brand-navy"
-                        aria-label="Buka menu navigasi" :aria-expanded="mobileOpen" @click="mobileOpen = !mobileOpen">
+                <button type="button" class="flex h-11 w-11 items-center justify-center rounded-lg text-slate-600 transition-colors hover:bg-slate-100 hover:text-brand-navy"
+                        :aria-label="mobileOpen ? 'Tutup menu navigasi' : 'Buka menu navigasi'" :aria-expanded="mobileOpen" @click="mobileOpen = !mobileOpen">
                     <svg class="h-6 w-6" x-show="!mobileOpen" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
@@ -227,14 +219,14 @@
          :class="mobileOpen ? 'max-h-[80vh] overflow-y-auto opacity-100' : 'max-h-0 opacity-0'"
          :aria-hidden="!mobileOpen"
          x-bind:inert.attr="! mobileOpen">
-        <div class="container-page space-y-1 py-4">
+        <div class="container-page space-y-1.5 py-3">
             @foreach ($nav as $item)
                 @continue(empty($item['route']) && empty($item['children']))
 
                 @if (isset($item['route']))
                     <a href="{{ route($item['route']) }}" @click="mobileOpen = false"
                        @class([
-                           'block rounded-lg px-3 py-2.5 text-sm font-medium transition-colors',
+                           'flex min-h-11 items-center rounded-lg px-3 py-2.5 text-sm font-medium transition-colors',
                            'bg-blue-50 font-semibold text-brand-navy' => $isRouteActive($item),
                            'text-slate-700 hover:bg-slate-100' => ! $isRouteActive($item),
                        ])
@@ -243,7 +235,7 @@
                     @php $isGroupActive = $isRouteActive($item); @endphp
                     <details class="group" @if ($isGroupActive) open @endif>
                         <summary @class([
-                            'flex cursor-pointer items-center justify-between rounded-lg px-3 py-2.5 text-sm font-medium transition-colors',
+                            'flex min-h-11 cursor-pointer items-center justify-between rounded-lg px-3 py-2.5 text-sm font-medium transition-colors',
                             'bg-blue-50 font-semibold text-brand-navy' => $isGroupActive,
                             'text-slate-700 hover:bg-slate-100' => ! $isGroupActive,
                         ])>
@@ -252,12 +244,12 @@
                                 <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                             </svg>
                         </summary>
-                        <div class="mt-1 space-y-0.5 border-l-2 border-slate-100 pl-3">
+                        <div class="mt-1 space-y-1 border-l-2 border-slate-100 pl-3">
                             @foreach ($item['children'] as $child)
                                 <a href="{{ route($child['route'], $child['params'] ?? []) }}"
                                    @click="mobileOpen = false"
                                    @class([
-                                       'block rounded-lg px-3 py-2 text-sm transition-colors',
+                                       'flex min-h-11 items-center rounded-lg px-3 py-2 text-sm transition-colors',
                                        'bg-blue-50 font-semibold text-brand-navy' => $isRouteActive($child),
                                        'text-slate-600 hover:bg-slate-100' => ! $isRouteActive($child),
                                    ])

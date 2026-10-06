@@ -46,9 +46,10 @@
         aria-haspopup="true"
         aria-expanded="false"
         aria-controls="program-switcher-panel"
-        class="inline-flex h-11 items-center gap-2 rounded-item border border-hairline bg-surface px-3 text-[13px] font-semibold text-ink transition-colors duration-200 hover:border-royal hover:text-royal-strong focus:outline-none focus-visible:ring-2 focus-visible:ring-royal focus-visible:ring-offset-2 dark:border-night-hairline dark:bg-night-raised dark:text-night-ink dark:hover:border-night-royal dark:hover:text-night-royal dark:focus-visible:ring-night-royal dark:focus-visible:ring-offset-night-surface"
+        class="inline-flex h-11 items-center gap-1.5 rounded-item border border-hairline bg-surface px-2.5 text-[13px] font-semibold text-ink transition-colors duration-200 hover:border-royal hover:text-royal-strong focus:outline-none focus-visible:ring-2 focus-visible:ring-royal focus-visible:ring-offset-2 dark:border-night-hairline dark:bg-night-raised dark:text-night-ink dark:hover:border-night-royal dark:hover:text-night-royal dark:focus-visible:ring-night-royal dark:focus-visible:ring-offset-night-surface sm:gap-2 sm:px-3"
     >
-        <span>Pilih Jurusan</span>
+        <span class="sm:hidden">Jurusan</span>
+        <span class="hidden sm:inline">Pilih Jurusan</span>
         <svg class="w-3.5 h-3.5 shrink-0 text-muted transition-transform duration-200 dark:text-night-muted" data-program-switcher-chevron fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
         <span class="sr-only">Jurusan {{ $program?->short_name }}</span>
     </button>

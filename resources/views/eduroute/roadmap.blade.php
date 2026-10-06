@@ -41,6 +41,20 @@
 @endphp
 
 <div class="mx-auto w-full min-w-0 max-w-[1200px]">
+    <nav class="mb-5 grid grid-cols-3 gap-2 lg:hidden" aria-label="Pilih kelas">
+        @foreach ([10, 11, 12] as $grade)
+            <a href="{{ route('eduroute.roadmap', ['program' => $program, 'grade' => $grade]) }}"
+               @if($activeGrade === $grade) aria-current="page" @endif
+               @class([
+                   'flex min-h-11 items-center justify-center rounded-item border px-2 text-xs font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-royal focus-visible:ring-offset-2 dark:focus-visible:ring-night-royal dark:focus-visible:ring-offset-night-canvas',
+                   'border-royal bg-royal-soft text-royal-strong dark:border-night-royal dark:bg-night-royal-soft dark:text-night-royal' => $activeGrade === $grade,
+                   'border-hairline bg-paper text-muted hover:border-royal/50 hover:text-royal-strong dark:border-night-hairline dark:bg-night-surface dark:text-night-muted dark:hover:border-night-royal/50 dark:hover:text-night-royal' => $activeGrade !== $grade,
+               ])>
+                Kelas {{ $grade }}
+            </a>
+        @endforeach
+    </nav>
+
     <div class="mb-4 max-w-3xl" data-reveal="up">
         <div class="inline-flex flex-col items-start">
             <h2 class="text-h2 font-semibold text-ink dark:text-night-ink">
@@ -58,7 +72,7 @@
     </div>
 
     @if($totalStages === 0 && !($isGrade12 && $isRpl))
-        <div class="max-w-3xl rounded-card border border-hairline bg-paper p-10 text-center shadow-soft dark:border-night-hairline dark:bg-night-surface" data-reveal="up">
+        <div class="max-w-3xl rounded-card border border-hairline bg-paper p-6 text-center shadow-soft dark:border-night-hairline dark:bg-night-surface sm:p-10" data-reveal="up">
             <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-royal-soft text-royal-strong dark:bg-night-royal-soft dark:text-night-royal">
                 <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             </div>
@@ -280,24 +294,38 @@
             tabindex="-1"
             class="relative w-full sm:max-w-lg rounded-t-hero sm:rounded-card border border-hairline dark:border-night-hairline border-t-[3px] bg-paper dark:bg-night-surface px-5 py-6 sm:p-6 shadow-lift max-h-[90vh] sm:max-h-[85vh] overflow-y-auto transition duration-150 ease-out opacity-0 scale-95 translate-y-2 sm:translate-y-0"
         >
+            <div class="sticky top-0 z-10 -mx-5 -mt-6 mb-2 flex items-center justify-between gap-2 bg-paper px-5 pt-3 dark:bg-night-surface sm:hidden">
+                <p class="flex items-center gap-2 text-micro font-semibold text-royal-strong dark:text-night-royal">
+                    <span data-stage-mobile-dot class="h-2 w-2 shrink-0 rounded-full bg-royal dark:bg-night-royal" aria-hidden="true"></span>
+                    <span data-stage-mobile-kicker></span>
+                </p>
+                <button
+                    type="button"
+                    data-stage-close
+                    aria-label="Tutup dialog materi"
+                    class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-item text-muted transition-colors duration-200 hover:bg-surface hover:text-ink dark:text-night-muted dark:hover:bg-night-raised dark:hover:text-night-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-royal dark:focus-visible:ring-night-royal"
+                >
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
             <p class="flex items-center gap-2 text-micro font-semibold text-royal-strong dark:text-night-royal">
                 <span id="stage-modal-dot" class="h-2 w-2 shrink-0 rounded-full bg-royal dark:bg-night-royal" aria-hidden="true"></span>
                 <span id="stage-modal-kicker"></span>
             </p>
+            <button
+                type="button"
+                data-stage-close
+                aria-label="Tutup dialog materi"
+                class="absolute top-3 right-3 hidden h-11 w-11 items-center justify-center rounded-item text-muted transition-colors duration-200 hover:bg-surface hover:text-ink dark:text-night-muted dark:hover:bg-night-raised dark:hover:text-night-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-royal dark:focus-visible:ring-night-royal sm:inline-flex"
+            >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
             <p id="stage-modal-type" class="mt-2 hidden text-micro font-semibold text-royal-strong dark:text-night-royal"></p>
             <h3 id="stage-modal-title" class="mt-1.5 text-h3 font-semibold leading-snug break-words text-ink dark:text-night-ink"></h3>
             <p id="stage-modal-description" class="mt-2 text-small text-muted dark:text-night-muted"></p>
 
             <p id="stage-modal-topics-label" class="mt-5 text-micro font-semibold text-ink dark:text-night-ink">Yang dipelajari</p>
             <ul id="stage-modal-topics" class="mt-2 text-small text-muted dark:text-night-muted list-disc pl-5 space-y-1.5 break-words"></ul>
-            <button
-                type="button"
-                data-stage-close
-                aria-label="Tutup dialog materi"
-                class="absolute top-3 right-3 inline-flex h-11 w-11 items-center justify-center rounded-item text-muted transition-colors duration-200 hover:bg-surface hover:text-ink dark:text-night-muted dark:hover:bg-night-raised dark:hover:text-night-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-royal dark:focus-visible:ring-night-royal"
-            >
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
         </div>
     </div>
 </div>
@@ -406,13 +434,15 @@
         const modalRoot = document.getElementById('stage-modal-root');
         const modal = document.getElementById('stage-modal');
         const kicker = document.getElementById('stage-modal-kicker');
+        const mobileKicker = modal.querySelector('[data-stage-mobile-kicker]');
         const modalDot = document.getElementById('stage-modal-dot');
+        const mobileModalDot = modal.querySelector('[data-stage-mobile-dot]');
         const modalType = document.getElementById('stage-modal-type');
         const title = document.getElementById('stage-modal-title');
         const description = document.getElementById('stage-modal-description');
         const topicsLabel = document.getElementById('stage-modal-topics-label');
         const topicsList = document.getElementById('stage-modal-topics');
-        const closeButton = modal.querySelector('[data-stage-close]');
+        const closeButtons = modal.querySelectorAll('[data-stage-close]');
         const backdrop = modalRoot.querySelector('[data-stage-backdrop]');
 
         if (!modalRoot || !modal) {
@@ -454,6 +484,8 @@
             const dotClass = barClass ? barClass.replace('border-t-', 'bg-') : 'bg-blue-500';
             modalDot.classList.remove.apply(modalDot.classList, accentDots);
             modalDot.classList.add(accentDots.indexOf(dotClass) !== -1 ? dotClass : 'bg-blue-500');
+            mobileModalDot.classList.remove.apply(mobileModalDot.classList, accentDots);
+            mobileModalDot.classList.add(accentDots.indexOf(dotClass) !== -1 ? dotClass : 'bg-blue-500');
         };
 
         const openModal = function (trigger) {
@@ -482,6 +514,7 @@
 
             setAccent(trigger.getAttribute('data-stage-bar'));
             kicker.textContent = 'Tahap ' + stageNumber;
+            mobileKicker.textContent = 'Tahap ' + stageNumber;
             modalType.textContent = stageTypeLabel;
             modalType.classList.toggle('hidden', !stageTypeLabel);
             title.textContent = stageTitle;
@@ -520,7 +553,7 @@
                 });
             }
 
-            (closeButton || modal).focus();
+            (closeButtons[0] || modal).focus();
         };
 
         const closeModal = function () {
@@ -565,9 +598,9 @@
             });
         });
 
-        if (closeButton) {
+        closeButtons.forEach(function (closeButton) {
             closeButton.addEventListener('click', closeModal);
-        }
+        });
 
         document.addEventListener('keydown', function (event) {
             if (!isModalOpen()) {

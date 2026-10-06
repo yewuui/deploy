@@ -17,7 +17,7 @@
 @endphp
 
 <div class="mx-auto w-full max-w-[1200px]">
-    <div class="mb-8" data-reveal="up">
+    <div class="mb-6 sm:mb-8" data-reveal="up">
         <div class="inline-flex flex-col items-start">
             <h2 class="text-h2 font-semibold text-ink dark:text-night-ink mb-2">Prestasi Jurusan {{ $program->short_name }}</h2>
             <span class="mb-3 block h-0.5 w-full min-w-[4rem] rounded-pill bg-royal dark:bg-night-royal" aria-hidden="true"></span>
@@ -37,7 +37,7 @@
     </div>
 
     @if($achievements->isEmpty())
-        <div class="rounded-card border border-hairline bg-paper p-10 text-center shadow-soft dark:border-night-hairline dark:bg-night-surface" data-reveal="up">
+        <div class="rounded-card border border-hairline bg-paper p-6 text-center shadow-soft dark:border-night-hairline dark:bg-night-surface sm:p-10" data-reveal="up">
             <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-gold-soft text-gold-strong dark:bg-night-gold-soft dark:text-night-gold">
                 <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8 21h8m-4-4v4M5 4h14v5a7 7 0 01-14 0V4z"/><path stroke-linecap="round" stroke-linejoin="round" d="M5 6H3a2 2 0 000 4h2m14-4h2a2 2 0 010 4h-2"/></svg>
             </div>

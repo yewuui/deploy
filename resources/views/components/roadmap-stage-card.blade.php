@@ -39,9 +39,9 @@
     @if($typeLabel)
         <span class="mt-2 inline-flex max-w-full self-start rounded-item bg-surface px-2 py-1 text-micro font-semibold text-royal-strong dark:bg-night-raised dark:text-night-royal">{{ $typeLabel }}</span>
     @endif
-    <span class="mt-2.5 block text-[13px] font-semibold leading-snug break-words text-ink dark:text-night-ink">{{ $title }}</span>
-    <span class="mt-1 block text-micro text-muted dark:text-night-muted">Buka tahap ini untuk melihat {{ $typeLabel ? 'rincian kegiatan' : 'rincian materi' }}.</span>
-    <span class="mt-2.5 inline-flex items-center gap-1.5 border-t border-hairline pt-2.5 text-micro font-semibold text-royal-strong transition-colors duration-200 group-hover:text-royal dark:border-night-hairline dark:text-night-royal dark:group-hover:text-night-royal">
+    <span class="mt-2.5 block text-sm font-semibold leading-snug break-words text-ink dark:text-night-ink sm:text-[13px]">{{ $title }}</span>
+    <span class="mt-1 block text-xs text-muted dark:text-night-muted sm:text-micro">Buka tahap ini untuk melihat {{ $typeLabel ? 'rincian kegiatan' : 'rincian materi' }}.</span>
+    <span class="mt-2.5 inline-flex items-center gap-1.5 border-t border-hairline pt-2.5 text-xs font-semibold text-royal-strong transition-colors duration-200 group-hover:text-royal dark:border-night-hairline dark:text-night-royal dark:group-hover:text-night-royal sm:text-micro">
         Lihat rincian
         <svg class="w-3 h-3 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
     </span>

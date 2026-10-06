@@ -7,7 +7,7 @@
 
 @section('content')
 <div class="mx-auto w-full max-w-[1200px]">
-    <div class="mb-6" data-reveal="up">
+    <div class="mb-5 sm:mb-6" data-reveal="up">
         <div class="inline-flex flex-col items-start">
             <h2 class="text-h2 font-semibold text-ink dark:text-night-ink mb-2">
                 Prospek Karier Lulusan {{ $program->short_name }}
@@ -20,7 +20,7 @@
     </div>
 
     @if($careers->isEmpty())
-        <div class="rounded-card border border-hairline bg-paper p-10 text-center shadow-soft dark:border-night-hairline dark:bg-night-surface" data-reveal="up">
+        <div class="rounded-card border border-hairline bg-paper p-6 text-center shadow-soft dark:border-night-hairline dark:bg-night-surface sm:p-10" data-reveal="up">
             <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-royal-soft text-royal-strong dark:bg-night-royal-soft dark:text-night-royal">
                 <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6M12 9v6M5 19h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2z"/></svg>
             </div>
@@ -104,7 +104,7 @@
     <div id="career-backdrop" class="absolute inset-0 bg-night-canvas/60"></div>
     <div class="relative flex min-h-full items-center justify-center p-4">
         <div role="dialog" aria-modal="true" aria-labelledby="career-modal-title" class="w-full max-w-lg rounded-card border border-hairline bg-paper max-h-[85vh] overflow-y-auto shadow-lift dark:border-night-hairline dark:bg-night-surface">
-            <div class="flex items-start gap-4 p-6 pb-0">
+            <div class="sticky top-0 z-10 flex items-start gap-4 bg-paper p-4 dark:bg-night-surface sm:static sm:bg-transparent sm:p-6 sm:pb-0">
                 <div id="career-modal-icon" class="flex h-11 w-11 shrink-0 items-center justify-center rounded-item bg-royal-soft text-royal-strong dark:bg-night-royal-soft dark:text-night-royal"></div>
                 <div class="min-w-0 flex-1">
                     <p class="text-micro font-semibold text-muted dark:text-night-muted">Prospek Karier {{ $program->short_name }}</p>

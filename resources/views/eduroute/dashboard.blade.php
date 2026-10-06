@@ -22,30 +22,50 @@
     $highlightIconKeys = ['code', 'smartphone', 'database', 'pen'];
 @endphp
 
-<div class="mx-auto w-full max-w-[1200px]">
-    <section class="relative isolate flex min-h-[20rem] items-center overflow-hidden rounded-hero border border-royal/20 px-6 py-8 shadow-soft mb-10 sm:min-h-[24rem] sm:px-8 lg:px-10" aria-labelledby="program-intro-title" data-reveal="up">
+<div class="mx-auto flex w-full max-w-[1200px] flex-col gap-8 sm:block">
+    <section class="order-0 relative isolate mb-0 flex min-h-[18rem] items-center overflow-hidden rounded-hero border border-royal/20 px-4 py-6 shadow-soft sm:mb-10 sm:min-h-[24rem] sm:px-8 sm:py-8 lg:px-10" aria-labelledby="program-intro-title" data-reveal="up">
         <div class="absolute inset-0 overflow-hidden bg-[#142b55]" aria-hidden="true">
-            <video class="absolute inset-0 h-full w-full object-cover object-center" src="{{ asset('vidio/1003.mp4') }}" autoplay muted loop playsinline preload="metadata"></video>
-            <div class="absolute inset-0 bg-gradient-to-r from-black/98 via-black/70 to-transparent"></div>
+            <video class="absolute inset-0 h-full w-full object-cover object-[58%_center] sm:object-center" src="{{ asset('video/1003.mp4') }}" poster="{{ asset('images/eduroute/SMKN_1_Bantul.jpg') }}" autoplay muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1"></video>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/75 to-black/40 sm:bg-gradient-to-r sm:from-black/98 sm:via-black/70 sm:to-transparent"></div>
         </div>
         <div class="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-blue-300 via-amber-300 to-red-500" aria-hidden="true"></div>
 
         <div class="relative max-w-2xl">
-            <p class="text-micro font-semibold uppercase tracking-wider text-blue-200 mb-3" data-reveal="up">SMKN 1 Bantul &middot; Jurusan {{ $program->name }}</p>
+            <p class="text-micro font-semibold uppercase tracking-wider text-blue-200 mb-3" data-reveal="up">
+                <span class="sm:hidden">SMKN 1 Bantul &middot; {{ $program->short_name }}</span>
+                <span class="hidden sm:inline">SMKN 1 Bantul &middot; {{ $program->name }}</span>
+            </p>
             <h2 id="program-intro-title" class="text-h1 font-bold text-white mb-4" data-reveal="up" data-reveal-delay="100">
                 {{ $program->hero_title ?? $program->name . ' (' . $program->short_name . ')' }}
             </h2>
-            @if($program->hero_text ?? $program->description)
-                <p class="text-body text-white/85 max-w-xl" data-reveal="up" data-reveal-delay="150">
-                    {{ $program->hero_text ?? $program->description }}
+            @php
+                $introDescription = $program->hero_text ?? $program->description;
+                $hasLongIntroDescription = $introDescription && \Illuminate\Support\Str::length($introDescription) > 160;
+            @endphp
+            @if($introDescription)
+                @if($hasLongIntroDescription)
+                    <div class="max-w-xl sm:hidden" x-data="{ expanded: false }" data-reveal="up" data-reveal-delay="150">
+                        <p class="text-sm leading-6 text-white/90" :class="expanded ? '' : 'line-clamp-3'">{{ $introDescription }}</p>
+                        <button type="button" class="mt-1 inline-flex min-h-10 items-center gap-1 text-xs font-semibold text-white underline decoration-white/60 underline-offset-4" @click="expanded = !expanded" :aria-expanded="expanded">
+                            <span x-show="!expanded">Baca selengkapnya</span>
+                            <span x-show="expanded" x-cloak>Tampilkan lebih sedikit</span>
+                            <svg class="h-3.5 w-3.5 transition-transform duration-200" :class="expanded && 'rotate-180'" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"></path></svg>
+                        </button>
+                    </div>
+                @else
+                    <p class="max-w-xl text-sm leading-6 text-white/90 sm:hidden" data-reveal="up" data-reveal-delay="150">{{ $introDescription }}</p>
+                @endif
+
+                <p class="hidden max-w-xl text-body text-white/85 sm:block" data-reveal="up" data-reveal-delay="150">
+                    {{ $introDescription }}
                 </p>
             @endif
         </div>
     </section>
 
     @if(! empty($program->highlights))
-        <section class="mb-10" aria-labelledby="rpl-focus-title">
-            <div class="mb-5" data-reveal="up">
+        <section class="order-2 mb-0 sm:mb-10" aria-labelledby="rpl-focus-title">
+            <div class="mb-4 sm:mb-5" data-reveal="up">
                 <div class="inline-flex flex-col items-start">
                     <h3 id="rpl-focus-title" class="text-h2 font-semibold text-ink dark:text-night-ink">Fokus pembelajaran</h3>
                     <span class="mt-2 block h-0.5 w-full min-w-[4rem] rounded-pill bg-royal dark:bg-night-royal" aria-hidden="true"></span>
@@ -53,7 +73,7 @@
                 <p class="mt-3 max-w-3xl text-small text-muted dark:text-night-muted">Bidang utama yang dipelajari siswa di jurusan {{ $program->short_name }}.</p>
             </div>
 
-            <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+            <div class="grid grid-cols-2 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
                 @foreach($program->highlights as $highlight)
                     @php
                         $haystack = strtolower($highlight['title'] ?? '');
@@ -65,42 +85,49 @@
                         }
                         $iconKey = $iconKey ?? $highlightIconKeys[$loop->index % count($highlightIconKeys)];
                     @endphp
-                    <div class="hover-lift flex h-full flex-col rounded-card border border-hairline bg-paper p-5 shadow-soft dark:border-night-hairline dark:bg-night-surface" data-reveal="up" data-reveal-delay="{{ min(($loop->index + 1) * 100, 400) }}">
-                        <span class="mb-4 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-item bg-royal-soft text-royal-strong dark:bg-night-royal-soft dark:text-night-royal" aria-hidden="true">
-                            <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="{{ $highlightIcons[$iconKey] }}"></path></svg>
+                    <div class="hover-lift flex h-full flex-col rounded-card border border-hairline bg-paper p-4 shadow-soft dark:border-night-hairline dark:bg-night-surface sm:p-5" data-reveal="up" data-reveal-delay="{{ min(($loop->index + 1) * 100, 400) }}">
+                        <span class="mb-2.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-item bg-royal-soft text-royal-strong dark:bg-night-royal-soft dark:text-night-royal sm:mb-4 sm:h-10 sm:w-10" aria-hidden="true">
+                            <svg class="h-4 w-4 sm:h-5 sm:w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="{{ $highlightIcons[$iconKey] }}"></path></svg>
                         </span>
-                        <h4 class="text-small font-semibold text-ink dark:text-night-ink">{{ $highlight['title'] }}</h4>
-                        <p class="mt-1.5 text-small text-muted dark:text-night-muted">{{ $highlight['description'] }}</p>
+                        <h4 class="text-xs font-semibold leading-snug text-ink dark:text-night-ink sm:text-small">{{ $highlight['title'] }}</h4>
+                        <p class="mt-1.5 text-xs leading-relaxed text-muted dark:text-night-muted sm:text-small">{{ $highlight['description'] }}</p>
                     </div>
                 @endforeach
             </div>
         </section>
     @endif
 
-    <section class="mb-10" aria-labelledby="rpl-grades-title">
-        <div class="mb-5" data-reveal="up">
+    <section class="order-1 mb-0 sm:mb-10" aria-labelledby="rpl-grades-title">
+        <div class="mb-4 sm:mb-5" data-reveal="up">
             <div class="inline-flex flex-col items-start">
-                <h3 id="rpl-grades-title" class="text-h2 font-semibold text-ink dark:text-night-ink">Kurikulum per kelas</h3>
+                <h3 id="rpl-grades-title" class="text-h2 font-semibold text-ink dark:text-night-ink">
+                    <span class="sm:hidden">Alur belajar kelas 10–12</span>
+                    <span class="hidden sm:inline">Kurikulum per kelas</span>
+                </h3>
                 <span class="mt-2 block h-0.5 w-full min-w-[4rem] rounded-pill bg-royal dark:bg-night-royal" aria-hidden="true"></span>
             </div>
-            <p class="mt-3 max-w-3xl text-small text-muted dark:text-night-muted">Pilih kelas untuk melihat alur pembelajarannya.</p>
+            <p class="mt-3 max-w-3xl text-small text-muted dark:text-night-muted">
+                <span class="sm:hidden">Materi disusun bertahap selama tiga tahun. Ketuk kelas untuk melihat urutan belajarnya.</span>
+                <span class="hidden sm:inline">Pilih kelas untuk melihat alur pembelajarannya.</span>
+            </p>
         </div>
-        <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+        <div class="grid grid-cols-3 gap-2 sm:gap-4">
             @foreach ([10, 11, 12] as $grade)
-                <a href="{{ route('eduroute.roadmap', ['program' => $program, 'grade' => $grade]) }}" data-reveal="up" data-reveal-delay="{{ min(($loop->index + 1) * 100, 300) }}" class="group hover-lift flex min-h-[44px] items-center justify-between gap-3 rounded-card border border-hairline bg-paper px-5 py-4 shadow-soft hover:border-royal/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-royal focus-visible:ring-offset-2 dark:border-night-hairline dark:bg-night-surface dark:hover:border-night-royal/50 dark:focus-visible:ring-offset-night-canvas">
-                    <span class="flex items-center gap-3.5">
-                        <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-item text-body font-bold tabular-nums {{ $grade === 12 ? 'bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-200' : 'bg-royal-soft text-royal-strong dark:bg-night-royal-soft dark:text-night-royal' }}" aria-hidden="true">{{ $grade }}</span>
-                        <span class="block text-small font-semibold text-ink dark:text-night-ink">Kelas {{ $grade }}</span>
+                <a href="{{ route('eduroute.roadmap', ['program' => $program, 'grade' => $grade]) }}" data-reveal="up" data-reveal-delay="{{ min(($loop->index + 1) * 100, 300) }}" class="group hover-lift flex min-h-[92px] flex-col items-center justify-center gap-2 rounded-card border border-hairline bg-gradient-to-br from-royal-soft/60 to-paper px-2 py-3 text-center shadow-soft hover:border-royal/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-royal focus-visible:ring-offset-2 dark:border-night-hairline dark:from-night-royal-soft/40 dark:to-night-surface dark:hover:border-night-royal/50 dark:focus-visible:ring-offset-night-canvas sm:min-h-[44px] sm:flex-row sm:justify-between sm:gap-3 sm:bg-paper sm:px-5 sm:py-4 sm:text-left sm:dark:bg-night-surface">
+                    <span class="flex flex-col items-center gap-1.5 sm:flex-row sm:gap-3.5">
+                        <span style="--grade-pulse-color: {{ $grade === 12 ? '239 68 68' : '37 99 235' }}; --grade-pulse-delay: {{ $loop->index * 550 }}ms;" class="curriculum-grade-number inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-item text-body font-bold tabular-nums sm:h-11 sm:w-11 {{ $grade === 12 ? 'bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-200' : 'bg-royal-soft text-royal-strong dark:bg-night-royal-soft dark:text-night-royal' }}" aria-hidden="true">{{ $grade }}</span>
+                        <span class="block text-xs font-semibold text-ink dark:text-night-ink sm:text-small">Kelas {{ $grade }}</span>
                     </span>
-                    <svg class="h-4 w-4 shrink-0 text-royal-strong transition-transform duration-200 group-hover:translate-x-0.5 dark:text-night-royal" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+                    <span class="text-[10px] font-medium text-royal-strong dark:text-night-royal sm:hidden">Lihat alur</span>
+                    <svg class="hidden h-4 w-4 shrink-0 text-royal-strong transition-transform duration-200 group-hover:translate-x-0.5 dark:text-night-royal sm:block" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
                 </a>
             @endforeach
         </div>
     </section>
 
     @if($teachers->isNotEmpty())
-        <section class="mb-10" aria-labelledby="rpl-teachers-title">
-            <div class="mb-5" data-reveal="up">
+        <section class="order-3 mb-0 sm:mb-10" aria-labelledby="rpl-teachers-title">
+            <div class="mb-4 sm:mb-5" data-reveal="up">
                 <div class="inline-flex flex-col items-start">
                     <h3 id="rpl-teachers-title" class="text-h2 font-semibold text-ink dark:text-night-ink">
                         Guru {{ $program->short_name }}
@@ -121,9 +148,9 @@
                         @endif
                         data-reveal="up"
                         data-reveal-delay="{{ min(($loop->index % 3 + 1) * 100, 300) }}"
-                        class="flex h-full min-w-0 flex-col overflow-hidden rounded-card border border-hairline bg-paper shadow-soft dark:border-night-hairline dark:bg-night-surface {{ $hasDetails ? 'hover-lift cursor-pointer hover:border-royal/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-royal focus-visible:ring-offset-2 dark:hover:border-night-royal/50 dark:focus-visible:ring-offset-night-canvas' : '' }}"
+                        class="flex h-full min-w-0 flex-row overflow-hidden rounded-card border border-hairline bg-paper shadow-soft dark:border-night-hairline dark:bg-night-surface sm:flex-col {{ $hasDetails ? 'hover-lift cursor-pointer hover:border-royal/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-royal focus-visible:ring-offset-2 dark:hover:border-night-royal/50 dark:focus-visible:ring-offset-night-canvas' : '' }}"
                     >
-                        <div class="relative aspect-[4/3] w-full overflow-hidden bg-surface dark:bg-night-raised">
+                        <div class="relative aspect-square w-2/5 max-w-36 shrink-0 overflow-hidden bg-surface dark:bg-night-raised sm:aspect-[4/3] sm:w-full sm:max-w-none">
                             <img
                                 src="{{ $teacher->photo_url ?? $teacherPlaceholderPhoto }}"
                                 alt="Foto {{ $teacher->name }}, {{ $teacher->subject }}"
@@ -134,7 +161,7 @@
                             >
                         </div>
 
-                        <div class="flex flex-1 flex-col p-5">
+                        <div class="flex min-w-0 flex-1 flex-col p-3 sm:p-5">
                             <h4 class="text-small font-semibold leading-snug text-ink dark:text-night-ink">
                                 {{ $teacher->name }}
                             </h4>
@@ -153,7 +180,7 @@
                             @if($teacher->description)
                                 {{-- Dibatasi tiga baris agar kartu tetap rapi dan sejajar;
                                     teks lengkapnya baru muncul saat profil dibuka. --}}
-                                <p class="mt-2.5 flex-1 text-small text-muted line-clamp-3 dark:text-night-muted">
+                                <p class="mt-2.5 flex-1 text-xs text-muted line-clamp-2 dark:text-night-muted sm:text-small sm:line-clamp-3">
                                     {{ $teacher->description }}
                                 </p>
                             @else
@@ -173,8 +200,8 @@
     @endif
 
     @if($teachers->isEmpty())
-        <section class="mb-10" aria-labelledby="rpl-teachers-title" data-reveal="up">
-            <div class="rounded-card border border-hairline bg-paper p-10 text-center shadow-soft dark:border-night-hairline dark:bg-night-surface">
+        <section class="order-3 mb-0 sm:mb-10" aria-labelledby="rpl-teachers-title" data-reveal="up">
+            <div class="rounded-card border border-hairline bg-paper p-6 text-center shadow-soft dark:border-night-hairline dark:bg-night-surface sm:p-10">
                 <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-royal-soft text-royal-strong dark:bg-night-royal-soft dark:text-night-royal">
                     <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2M9.5 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm9.5 10v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                 </div>
@@ -184,15 +211,15 @@
     @endif
 
     @if($partners->isNotEmpty())
-        <section class="pb-4">
-            <div class="mb-6 text-center" data-reveal="up">
+        <section class="order-4 pb-4">
+            <div class="mb-4 text-center sm:mb-6" data-reveal="up">
                 <div class="inline-flex flex-col items-center">
                     <h3 class="text-h2 font-semibold text-ink dark:text-night-ink">Mitra industri</h3>
                     <span class="mt-2 block h-0.5 w-full min-w-[4rem] rounded-pill bg-royal dark:bg-night-royal" aria-hidden="true"></span>
                 </div>
                 <p class="mt-3 text-small text-muted dark:text-night-muted">Industri yang bekerja sama dengan Jurusan {{ $program->short_name }} SMKN 1 Bantul</p>
             </div>
-            <div class="grid w-full grid-cols-2 items-stretch gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+            <div class="grid w-full grid-cols-2 items-stretch gap-2 sm:grid-cols-3 sm:gap-4 md:grid-cols-4 lg:grid-cols-6">
                 @foreach ($partners as $partner)
                     <div data-reveal="zoom" data-reveal-delay="{{ min(($loop->index % 6 + 1) * 60, 400) }}" class="flex">
                         <x-partner-card
@@ -207,8 +234,8 @@
             </div>
         </section>
     @elseif($partners->isEmpty())
-        <section class="pb-4" data-reveal="up">
-            <div class="rounded-card border border-hairline bg-paper p-10 text-center shadow-soft dark:border-night-hairline dark:bg-night-surface">
+        <section class="order-4 pb-4" data-reveal="up">
+            <div class="rounded-card border border-hairline bg-paper p-6 text-center shadow-soft dark:border-night-hairline dark:bg-night-surface sm:p-10">
                 <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-royal-soft text-royal-strong dark:bg-night-royal-soft dark:text-night-royal">
                     <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7zm0 4h16"/></svg>
                 </div>
@@ -217,7 +244,9 @@
         </section>
     @endif
 
-    <x-organizers variant="eduroute" :divided="false" />
+    <div class="order-5 sm:contents">
+        <x-organizers variant="eduroute" :divided="false" />
+    </div>
 </div>
 
 @if($teachers->isNotEmpty())

@@ -6,6 +6,14 @@
 
     $seoTitle = 'PKL';
     $seoDescription = 'Kemitraan Praktik Kerja Lapangan '.\App\Support\Site::name().' bersama industri untuk memberi pengalaman kerja nyata bagi siswa.';
+    $schoolWhatsapp = Site::whatsappUrl();
+    $schoolEmail = Site::get('contact.email');
+    $schoolPhone = Site::phone();
+    $partnershipContactUrl = $schoolWhatsapp
+        ?? ($schoolEmail ? 'mailto:'.$schoolEmail : ($schoolPhone ? 'tel:'.preg_replace('/[^0-9+]/', '', $schoolPhone) : null));
+    $partnershipContactLabel = $schoolWhatsapp
+        ? 'Hubungi via WhatsApp'
+        : ($schoolEmail ? 'Kirim email ke sekolah' : 'Telepon sekolah');
 @endphp
 
 @section('content')
@@ -165,6 +173,28 @@
             </article>
         </section>
 
+        <section class="mt-14 overflow-hidden rounded-3xl bg-brand-navy text-white shadow-panel" aria-labelledby="pkl-partnership-heading" data-reveal="up">
+            <div class="grid gap-6 p-6 sm:p-8 md:grid-cols-[minmax(0,1fr)_auto] md:items-center">
+                <div class="max-w-2xl">
+                    <p class="text-xs font-bold uppercase tracking-[0.18em] text-cyan-200">Kolaborasi dengan sekolah</p>
+                    <h2 id="pkl-partnership-heading" class="mt-3 font-display text-2xl font-bold tracking-tight text-white sm:text-3xl">
+                        Ingin menjadi mitra PKL?
+                    </h2>
+                    <p class="mt-3 text-sm leading-relaxed text-white/80 sm:text-base">
+                        Perusahaan atau instansi yang ingin membuka kesempatan praktik, menjajaki kerja sama, atau berkolaborasi dengan SMK Negeri 1 Bantul dapat menghubungi sekolah untuk berdiskusi lebih lanjut.
+                    </p>
+                </div>
+
+                @if ($partnershipContactUrl)
+                    <x-button :href="$partnershipContactUrl" :target="$schoolWhatsapp ? '_blank' : null" variant="outline" size="lg" class="w-full shrink-0 border-white bg-white text-brand-navy hover:border-cyan-200 hover:bg-cyan-50 sm:w-fit">
+                        {{ $partnershipContactLabel }}
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7-7 7 7-7 7" />
+                        </svg>
+                    </x-button>
+                @endif
+            </div>
+        </section>
 
     </div>
 @endsection

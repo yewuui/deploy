@@ -1,6 +1,6 @@
 @props([
     'group' => 'penyelenggara',
-    'title' => 'Support By',
+    'title' => 'Powered by',
     // "school" untuk halaman utama sekolah, "eduroute" untuk microsite EduRoute
     // yang memakai set token dan dukungan dark mode yang berbeda.
     'variant' => 'school',
@@ -14,17 +14,15 @@
     $organizers = \App\Models\Gallery::published()->ordered()->group($group)->get();
     $isEduroute = $variant === 'eduroute';
 
-    // Logo ditampilkan polos tanpa kartu: hanya gambar, tanpa border dan tanpa
-    // nama di bawahnya. Efek grayscale dipakai supaya logo berwarna tidak
-    // bersaing dengan isi halaman dan kembali penuh saat hover.
+    // Logo ditampilkan polos tanpa kartu atau nama di bawahnya, dengan warna aslinya.
     $logoClass = $isEduroute
-        ? 'h-11 w-auto max-w-[10rem] object-contain opacity-70 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 dark:opacity-60 dark:grayscale dark:hover:opacity-100 dark:hover:grayscale-0'
-        : 'h-12 w-auto max-w-[10rem] object-contain opacity-70 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 sm:h-14';
+        ? 'h-8 w-auto max-w-[7rem] object-contain transition-transform duration-300 hover:scale-105 sm:h-11 sm:max-w-[10rem]'
+        : 'h-12 w-auto max-w-[10rem] object-contain transition-transform duration-300 hover:scale-105 sm:h-14';
 @endphp
 
 @if ($organizers->isNotEmpty())
     <section @class([
-        'mt-14' => $isEduroute && ! $divided,
+        'mt-0 sm:mt-14' => $isEduroute && ! $divided,
         'mt-8 border-t border-hairline pt-6 pb-2 dark:border-night-hairline' => $isEduroute && $divided,
         'border-t border-slate-200/80 bg-surface py-12 lg:py-14' => ! $isEduroute,
     ]) aria-labelledby="support-heading">
@@ -38,11 +36,11 @@
         </h2>
 
         <ul @class([
-            'mt-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-6 sm:gap-x-12' => $isEduroute,
-            'container-page mx-auto mt-10 flex max-w-5xl flex-wrap items-center justify-center gap-x-10 gap-y-8 sm:gap-x-14' => ! $isEduroute,
+            'mx-auto mt-5 grid max-w-sm grid-cols-2 items-center justify-items-center gap-x-3 gap-y-4 sm:mt-6 sm:flex sm:max-w-none sm:flex-wrap sm:justify-center sm:gap-x-12' => $isEduroute,
+            'container-page mx-auto mt-8 grid max-w-sm grid-cols-2 items-center justify-items-center gap-x-4 gap-y-6 sm:mt-10 sm:flex sm:max-w-5xl sm:flex-wrap sm:justify-center sm:gap-x-14 sm:gap-y-8' => ! $isEduroute,
         ])>
             @foreach ($organizers as $organizer)
-                <li class="min-w-0" data-reveal="up" data-reveal-delay="{{ $loop->index * 75 }}">
+                <li class="flex min-w-0 justify-center last:col-span-2 sm:last:col-auto" data-reveal="up" data-reveal-delay="{{ $loop->index * 75 }}">
                     @if ($organizer->safe_website_url)
                         <a href="{{ $organizer->safe_website_url }}" target="_blank" rel="noopener noreferrer"
                            class="inline-flex rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-sky focus-visible:ring-offset-2">

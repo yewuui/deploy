@@ -1,7 +1,7 @@
 @props(['text' => null, 'description' => null])
 
 <header {{ $attributes->merge(['class' => 'border-b border-slate-200/80 bg-surface']) }}>
-    <div class="container-page py-10 sm:py-12 lg:py-14">
+    <div class="container-page py-8 sm:py-12 lg:py-14">
         <p class="eyebrow">{{ \App\Support\Site::shortName() }}</p>
 
         @if ($text)

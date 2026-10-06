@@ -4,8 +4,8 @@
 
 <footer class="bg-slate-950 text-slate-300">
     <div class="container-page">
-        <div class="grid grid-cols-1 gap-10 py-14 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8 lg:py-16">
-            <div class="lg:col-span-4">
+        <div class="grid grid-cols-2 gap-8 py-10 sm:gap-10 sm:py-14 lg:grid-cols-12 lg:gap-8 lg:py-16">
+            <div class="col-span-2 lg:col-span-4">
                 <div class="flex items-center gap-3">
                     <img src="{{ Site::logo() }}" alt="" width="40" height="40" class="h-10 w-10 object-contain" loading="lazy">
                     <div class="leading-tight">
@@ -89,7 +89,7 @@
                 </ul>
             </nav>
 
-            <nav class="lg:col-span-4" aria-label="Program keahlian">
+            <nav class="col-span-2 lg:col-span-4" aria-label="Program keahlian">
                 <h2 class="font-display text-sm font-semibold tracking-wide text-white">Program Keahlian</h2>
                 <ul class="mt-4 grid grid-cols-1 gap-2.5 text-sm sm:grid-cols-2">
                     @foreach ($programs as $program)

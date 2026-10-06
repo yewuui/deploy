@@ -8,6 +8,7 @@ class BludUnit extends Model
 {
     protected $fillable = [
         'name',
+        'image',
         'is_published',
         'sort_order',
     ];
@@ -27,5 +28,10 @@ class BludUnit extends Model
     public function scopeOrdered($query)
     {
         return $query->orderBy('sort_order')->orderBy('id');
+    }
+
+    public function getImageUrlAttribute(): ?string
+    {
+        return $this->image ? asset($this->image) : null;
     }
 }

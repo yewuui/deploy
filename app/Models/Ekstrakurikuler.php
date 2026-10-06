@@ -30,4 +30,9 @@ class Ekstrakurikuler extends Model
     {
         return $query->orderBy('sort_order')->orderBy('name');
     }
+
+    public function getImageUrlAttribute(): ?string
+    {
+        return $this->image ? asset($this->image) : null;
+    }
 }

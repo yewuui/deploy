@@ -12,8 +12,19 @@ class LayananController extends Controller
 {
     public function blud(): View
     {
+        $serviceData = json_decode(
+            file_get_contents(database_path('data/layanan.json')),
+            true,
+            512,
+            JSON_THROW_ON_ERROR,
+        );
+
+        $unitDetails = collect($serviceData['blud_unit'] ?? [])
+            ->keyBy('name');
+
         return view('blud', [
-            'units' => BludUnit::published()->ordered()->get(),
+            'units' => BludUnit::published()->ordered()->whereNotNull('image')->get(),
+            'unitDetails' => $unitDetails,
         ]);
     }
 

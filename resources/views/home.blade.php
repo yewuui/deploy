@@ -17,11 +17,11 @@
         <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_60%_at_15%_0%,rgba(11,76,240,0.10),transparent_60%),radial-gradient(50%_50%_at_100%_20%,rgba(0,147,221,0.10),transparent_60%)]" aria-hidden="true"></div>
 
         <div class="container-page relative">
-            <div class="grid items-center gap-12 py-14 lg:grid-cols-2 lg:gap-16 lg:py-20">
+            <div class="grid items-center gap-5 py-6 sm:gap-12 sm:py-14 lg:grid-cols-2 lg:gap-16 lg:py-20">
                 <div class="max-w-xl" data-reveal="right">
                     <p class="eyebrow">Halo sobat skansaba!</p>
 
-                    <h1 class="mt-4 font-display text-4xl font-bold leading-[1.1] tracking-tight text-slate-900 sm:text-5xl lg:text-[3.4rem]">
+                    <h1 class="mt-4 font-display text-3xl font-bold leading-[1.1] tracking-tight text-slate-900 sm:text-5xl lg:text-[3.4rem]">
                         Selamat Datang di
                         <span class="mt-2 block text-brand-sky">{{ Site::name() }}</span>
                     </h1>
@@ -31,16 +31,16 @@
                     </p>
 
                     <div class="mt-8 flex flex-wrap items-center gap-3" data-reveal="up" data-reveal-delay="150">
-                        <x-button :href="route('ppdb')" variant="primary" size="lg">
+                        <x-button :href="route('ppdb')" variant="primary" size="lg" class="w-full sm:w-fit">
                             Informasi PPDB
                             <span aria-hidden="true">&rarr;</span>
                         </x-button>
-                        <x-button :href="Site::mapsUrl()" target="_blank" variant="outline" size="lg">
+                        <x-button :href="Site::mapsUrl()" target="_blank" variant="outline" size="lg" class="w-full sm:w-fit">
                             Kunjungi Sekolah
                         </x-button>
                     </div>
 
-                    <dl class="mt-10 grid max-w-sm grid-cols-2 gap-6 border-t border-slate-200 pt-6">
+                    <dl class="mt-8 grid max-w-sm grid-cols-2 gap-4 border-t border-slate-200 pt-5 sm:mt-10 sm:gap-6 sm:pt-6">
                         <div>
                             <dt class="text-xs font-medium text-slate-500">Berdiri Sejak</dt>
                             <dd class="mt-1 font-display text-xl font-bold text-slate-900">1968</dd>
@@ -55,9 +55,9 @@
                 <div class="grid grid-cols-2 gap-3 sm:gap-4" data-reveal="zoom">
                     @php
                         $slots = [
-                            ['class' => 'col-span-2 aspect-[16/10]', 'delay' => 0],
-                            ['class' => 'aspect-square', 'delay' => 100],
-                            ['class' => 'aspect-square', 'delay' => 200],
+                            ['class' => 'col-span-2 aspect-[16/9] sm:aspect-[16/10]', 'delay' => 0],
+                            ['class' => 'aspect-[4/3] sm:aspect-square', 'delay' => 100],
+                            ['class' => 'aspect-[4/3] sm:aspect-square', 'delay' => 200],
                         ];
                     @endphp
 
